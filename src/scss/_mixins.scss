@@ -1,0 +1,33 @@
+/*--------------------------- VARIABLES ---------------------------*/
+$backgroundColor: #1c1c1c;
+$primaryColor: #2b2e3b;
+$secondaryColor: #302a18;
+$terciaryColor: #fde4c3;
+
+/*--------------------------- RESPONSIVE ---------------------------*/
+$pc: 1152px;
+$tablet: 991px;
+$mobile: 768px;
+
+@mixin responsive($medida) {
+  @if $medida==pc {
+    @media screen and (min-width: $pc) {
+      @content;
+    }
+  } @else if $medida==tablet {
+    @media screen and (max-width: $tablet) {
+      @content;
+    }
+  } @else if $medida==mobile {
+    @media screen and (max-width: $mobile) {
+      @content;
+    }
+  }
+}
+
+/*--------------------------- MIXINS ---------------------------*/
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
