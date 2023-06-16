@@ -1,4 +1,8 @@
 const Services = () => {
-  return <h1>Services</h1>;
+  return (
+    <section>
+      <h1>Services</h1>
+    </section>
+  );
 };
 export { Services };

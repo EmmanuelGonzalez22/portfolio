@@ -1,7 +1,6 @@
 @import "mixins";
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   font-synthesis: none;
@@ -10,17 +9,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-  --header-height: 3.5rem;
-
-  --hue: 162;
-  --first-color: hsl(var(--hue), 100%, 40%);
-  --first-color-alt: hsl(var(--hue), 56%, 35%);
-  --title-color: #f6f6f6;
-  --text-color: hsl(228, 8%, 65%);
-  --bg-color: hsl(228, 15%, 20%);
-  --container-color: hsl(228, 15%, 15%);
-
-  /*========== Font and typography ==========*/
+  /*--------------------------- FONTS ---------------------------*/
   --font: "Poppins", sans-serif;
   --biggest-font-size: 2rem;
   --bigger-font-size: 1.25rem;
@@ -31,13 +20,7 @@
   --small-font-size: 0.813rem;
   --smaller-font-size: 0.75rem;
 
-  /*========== Font weight ==========*/
-  --font-regular: 400;
-  --font-medium: 500;
-  --font-semi-bold: 600;
-  --font-bold: 700;
-
-  /* RESPONSIVE FONT */
+  /*--------------------------- RESPONSIVE FONTS ---------------------------*/
   @include responsive(pc) {
     --biggest-font-size: 4rem;
     --bigger-font-size: 2rem;
@@ -60,8 +43,10 @@ html {
   scroll-behavior: smooth;
 }
 
-#root {
-  width: 100vw;
+body {
+  min-height: 100vh;
+  background-color: $primaryColor;
+  color: $textColor;
 }
 
 input,
@@ -71,11 +56,14 @@ body {
   font-size: var(--normal-font-size);
 }
 
-body {
-  min-width: $mobile;
+main {
+  margin-top: 6.5rem;
+}
+
+main,
+section {
   min-height: 100vh;
-  background-color: $primaryColor;
-  color: var(--text-color);
+  padding: 0 1rem;
 }
 
 input,
@@ -89,8 +77,8 @@ h1,
 h2,
 h3,
 h4 {
-  color: var(--title-color);
-  font-weight: var(--font-bold);
+  color: $tittleColor;
+  font-weight: bold;
 }
 
 ul {
@@ -108,8 +96,4 @@ img,
 svg {
   max-width: 100%;
   height: auto;
-}
-
-.active {
-  color: aqua;
 }

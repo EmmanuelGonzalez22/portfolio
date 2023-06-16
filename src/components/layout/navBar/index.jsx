@@ -1,126 +1,109 @@
 import { Link } from "react-scroll";
-
-/* const NavBar = () => {
-  return (
-    <nav className='navbar navbar-expand-lg navbar-light'>
-      <div className='container-fluid'>
-        <Link to='/' className='navbar-brand'>
-          LOGO
-        </Link>
-        <button
-          className='navbar-toggler'
-          type='button'
-          data-bs-toggle='collapse'
-          data-bs-target='#navBar'
-          aria-controls='navBar'
-          aria-expanded='false'
-          aria-label='Toggle navigation'
-        >
-          <span className='navbar-toggler-icon'></span>
-        </button> */
-{
-  /* Collapse */
-}
-{
-  /* <div className='collapse navbar-collapse' id='navBar'>
-          <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
-            <li className='nav-item'>
-              <Link
-                to='home'
-                className='nav-link'
-                activeclassname='active'
-                smooth={true}
-                duration={500}
-              >
-                Home
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link
-                to='about'
-                className='nav-link'
-                activeclassname='active'
-                smooth={true}
-                duration={500}
-              >
-                About
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link
-                to='services'
-                className='nav-link'
-                activeclassname='active'
-                smooth={true}
-                duration={500}
-              >
-                Services
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link
-                to='projects'
-                className='nav-link'
-                activeclassname='active'
-                smooth={true}
-                duration={500}
-              >
-                Projects
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link
-                to='contact'
-                className='nav-link'
-                activeclassname='active'
-                smooth={true}
-                duration={500}
-              >
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  );
-}; */
-}
+import { useRef } from "react";
+import "./styles.scss";
 
 const NavBar = () => {
+  const menuRef = useRef(null);
+  const toggleMenuRef = useRef(null);
+
+  const handleMenu = () => {
+    menuRef.current.classList.toggle("show");
+    toggleMenuRef.current.classList.toggle("show");
+  };
+
+  const removeShowMenu = () => {
+    menuRef.current.classList.remove("show");
+    toggleMenuRef.current.classList.remove("show");
+  };
+
   return (
-    <header>
-      <nav>
-        <div>
-          <Link to='/'>LOGO</Link>
-        </div>
-        <ul>
-          <li>
-            <Link smooth={true} duration={500} to='home'>
+    <header className='header__main'>
+      <nav className='nav__menu'>
+        <Link
+          className='logo__container'
+          spy={true}
+          smooth={true}
+          duration={500}
+          activeClass='active'
+          to='home'
+          offset={-6.5 * 16}
+          onClick={removeShowMenu}
+        >
+          Emmanuel <span>González</span>
+        </Link>
+        <ul className='nav__list' ref={menuRef}>
+          <li className='nav__item'>
+            <Link
+              spy={true}
+              smooth={true}
+              duration={500}
+              activeClass='active'
+              to='home'
+              offset={-6.5 * 16}
+              onClick={removeShowMenu}
+            >
               Home
             </Link>
           </li>
-          <li>
-            <Link smooth={true} duration={500} to='about'>
+          <li className='nav__item'>
+            <Link
+              spy={true}
+              smooth={true}
+              duration={500}
+              activeClass='active'
+              to='about'
+              offset={-6.5 * 16}
+              onClick={removeShowMenu}
+            >
               About
             </Link>
           </li>
-          <li>
-            <Link smooth={true} duration={500} to='services'>
+          <li className='nav__item'>
+            <Link
+              spy={true}
+              smooth={true}
+              duration={500}
+              activeClass='active'
+              to='services'
+              offset={-6.5 * 16}
+              onClick={removeShowMenu}
+            >
               Services
             </Link>
           </li>
-          <li>
-            <Link smooth={true} duration={500} to='projects'>
+          <li className='nav__item'>
+            <Link
+              spy={true}
+              smooth={true}
+              duration={500}
+              activeClass='active'
+              to='projects'
+              offset={-6.5 * 16}
+              onClick={removeShowMenu}
+            >
               Projects
             </Link>
           </li>
-          <li>
-            <Link smooth={true} duration={500} to='contact'>
+          <li className='nav__item'>
+            <Link
+              spy={true}
+              smooth={true}
+              duration={500}
+              activeClass='active'
+              to='contact'
+              offset={-6.5 * 16}
+              onClick={removeShowMenu}
+            >
               Contact
             </Link>
           </li>
         </ul>
+        {/* BURGUER MENU */}
+        <div id='toggle__menu' onClick={handleMenu} ref={toggleMenuRef}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </nav>
     </header>
   );
