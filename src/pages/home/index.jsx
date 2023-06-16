@@ -3,8 +3,10 @@ import { Link } from "react-scroll";
 const Home = () => {
   return (
     <section>
-      <h1>Home</h1>
-      <Link to='about'>About</Link>
+      <h1>
+        Emmanuel <span>González</span>
+      </h1>
+      <Link to='about'>About me</Link>
     </section>
   );
 };

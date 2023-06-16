@@ -3,7 +3,9 @@ const Footer = () => {
 
   return (
     <footer className='footer'>
-      <p>Developed by Emmanuel González &copy; {currentYear}</p>
+      <section>
+        <p>Copyright &copy; Emmanuel González - {currentYear}</p>
+      </section>
     </footer>
   );
 };
