@@ -22,3 +22,13 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Archivos generados por npm/yarn
+node_modules/
+package-lock.json
+
+# Archivo de configuración específico de ESLint
+eslintrc.cjs
+
+# Archivo de configuración específico de Vite
+vite-config.js
