@@ -2,9 +2,11 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className='footer'>
-      <p>Developed by Emmanuel González &copy; {currentYear}</p>
-    </div>
+    <footer className='footer'>
+      <section>
+        <p>Copyright &copy; Emmanuel González - {currentYear}</p>
+      </section>
+    </footer>
   );
 };
 

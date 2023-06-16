@@ -1,12 +1,13 @@
-/*--------------------------- VARIABLES ---------------------------*/
+/*--------------------------- VARS ---------------------------*/
 $backgroundColor: #1c1c1c;
 $primaryColor: #2b2e3b;
 $secondaryColor: #302a18;
-$terciaryColor: #fde4c3;
+$tittleColor: #ffcb74;
+$textColor: #f6f6f6;
 
 /*--------------------------- RESPONSIVE ---------------------------*/
 $pc: 1152px;
-$tablet: 991px;
+$tablet: 1151px;
 $mobile: 768px;
 
 @mixin responsive($medida) {
@@ -27,7 +28,6 @@ $mobile: 768px;
 
 /*--------------------------- MIXINS ---------------------------*/
 @mixin center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
 }
