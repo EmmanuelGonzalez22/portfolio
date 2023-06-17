@@ -1,0 +1,71 @@
+@import "../../../scss/mixins";
+
+.footer {
+  height: 5.5rem;
+  @include center;
+  background: $primaryColor;
+  .footer__container {
+    min-height: auto;
+    text-align: center;
+    width: 100%;
+    @include responsive(pc) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+    }
+    .social__container {
+      margin-bottom: 10px;
+      @include responsive(pc) {
+        position: relative;
+        right: 50%;
+        transform: translateX(50%);
+        margin-bottom: 0;
+      }
+      .social__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        .social__list-decoration {
+          width: 3rem;
+          height: 2px;
+          background-color: $tittleColor;
+          @include responsive(pc) {
+            width: 4rem;
+          }
+          @include responsive(mobile) {
+            width: 2rem;
+          }
+        }
+      }
+      .social__item {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        position: relative;
+        background-color: $secondaryColor;
+        transition: background-color 1s ease-out;
+        cursor: pointer;
+        &:hover {
+          background-color: $tittleColor;
+          a {
+            color: $secondaryColor;
+          }
+        }
+        a {
+          position: absolute;
+          top: 52%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: var(--bigger-font-size);
+          color: $textColor;
+          transition: color 0.5s ease-out;
+        }
+      }
+    }
+  }
+  .copy__container p {
+    font-size: var(--smaller-font-size);
+  }
+}
