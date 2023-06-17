@@ -6,7 +6,9 @@ const Home = () => {
       <h1>
         Emmanuel <span>González</span>
       </h1>
-      <Link to='about'>About me</Link>
+      <Link to='about' offset={-6.5 * 16} smooth={true} duration={500}>
+        About me
+      </Link>
     </section>
   );
 };
