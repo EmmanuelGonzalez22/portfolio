@@ -1,0 +1,27 @@
+@import "../../scss/mixins";
+
+.projects__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h3 {
+    font-size: var(--smaller-font-size);
+    color: $textColor;
+    text-align: center;
+    span {
+      color: $tittleColor;
+    }
+  }
+
+  .projects__title {
+    font-size: var(--h1-font-size);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: auto;
+  }
+  .carousel__container {
+    margin-bottom: auto;
+    width: 100%;
+  }
+}
