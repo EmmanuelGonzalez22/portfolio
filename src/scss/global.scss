@@ -63,7 +63,7 @@ main {
 
 main,
 section {
-  min-height: 100vh;
+  min-height: calc(100vh - 6rem);
   padding: 0 1rem;
 }
 
