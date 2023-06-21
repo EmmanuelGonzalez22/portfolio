@@ -23,12 +23,28 @@ dist-ssr
 *.sln
 *.sw?
 
+# Firebase
+firebase.json
+firebase-debug.log
+firebase-err.log
+.firebaserc
+.firebase
+
+# Github
+.github/workflows
+
+# Public
+public
+
 # Archivos generados por npm/yarn
 node_modules/
 package-lock.json
+package.json
 
 # Archivo de configuración específico de ESLint
 eslintrc.cjs
 
 # Archivo de configuración específico de Vite
 vite-config.js
+
+
