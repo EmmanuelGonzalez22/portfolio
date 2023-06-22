@@ -36,7 +36,7 @@ const Carousel = () => {
       /* navigation */
       keyboard
       /* pagination={{ clickable: true }} */
-      modules={[EffectCoverflow /* Navigation */, , Keyboard /* Pagination */]}
+      modules={[EffectCoverflow, Keyboard /* Pagination, Navigation */]}
     >
       <div className='swiper-wrapper'>
         {slides.map((slide) => (
