@@ -66,7 +66,7 @@ const ContactForm = ({ onSubmit }) => {
         </div>
         <p id='form-message'></p>
         <div className='buttons__container'>
-          <button type='submit' className='submit__button'>
+          <button type='submit' className='submit__button' id='submit__button'>
             Enviar mensaje
           </button>
           <p>O si preferís...</p>

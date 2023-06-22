@@ -1,4 +1,6 @@
 const onSubmit = () => {
+  const buttonLoader = document.getElementById("submit__button");
+  buttonLoader.innerHTML = "Enviando...";
   const formMessage = document.getElementById("form-message");
   const inputs = document.querySelectorAll(".has-value");
   emailjs
@@ -10,6 +12,7 @@ const onSubmit = () => {
     )
     .then(
       () => {
+        buttonLoader.innerHTML = "Enviar mensaje";
         formMessage.innerHTML = "Mensaje enviado correctamente ✅";
         document.getElementById("contactForm").reset();
         inputs.forEach((input) => {
@@ -20,6 +23,7 @@ const onSubmit = () => {
         }, 5000);
       },
       (error) => {
+        buttonLoader.innerHTML = "Enviar mensaje";
         formMessage.innerHTML = "Error al enviar el mensaje ❌";
         console.log(error);
       }

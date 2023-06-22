@@ -1,10 +1,8 @@
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Navigation, Keyboard, Pagination } from "swiper";
+import { EffectCoverflow, Keyboard } from "swiper";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
-import "swiper/css/navigation";
 import "./styles.scss";
 
 const slides = [
@@ -33,10 +31,8 @@ const Carousel = () => {
         modifier: 1,
         slideShadows: true,
       }}
-      /* navigation */
       keyboard
-      /* pagination={{ clickable: true }} */
-      modules={[EffectCoverflow, Keyboard /* Pagination, Navigation */]}
+      modules={[EffectCoverflow, Keyboard]}
     >
       <div className='swiper-wrapper'>
         {slides.map((slide) => (
