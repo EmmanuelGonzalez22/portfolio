@@ -6,15 +6,68 @@ import "swiper/css/effect-coverflow";
 import "./styles.scss";
 
 const slides = [
-  "https://i.postimg.cc/Z0ktfskN/peter-broomfield-m3m-ln-R90u-M-unsplash.jpg",
-  "https://i.postimg.cc/MTTSXjbn/brandon-atchison-e-BJWhlq-WR54-unsplash.jpg",
-  "https://i.postimg.cc/8cfgmQYD/campbell-3-ZUs-NJhi-Ik-unsplash.jpg",
-  "https://i.postimg.cc/8Ck5BcmS/evgeny-tchebotarev-aiwu-Lj-LPFn-U-unsplash.jpg",
-  "https://i.postimg.cc/66F8J9tr/hakon-sataoen-qyfco1nf-Mtg-unsplash.jpg",
-  "https://i.postimg.cc/ydbzRYvv/joey-banks-YApi-Wyp0lqo-unsplash.jpg",
-  "https://i.postimg.cc/NGKKzyqG/joshua-koblin-eq-W1-MPin-EV4-unsplash.jpg",
-  "https://i.postimg.cc/JhK81QJw/marcus-p-o-UBjd22g-F6w-unsplash.jpg",
+  {
+    src: "https://emmanuelgonzalez22.github.io/PF-GonzalezSosa.github.io/",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687487030/mountain_ew4mex.png",
+  },
+  {
+    src: "https://emmanuelgonzalez22.github.io/PF-GonzalezSosa.github.io/",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687487035/mountain2_yalhvb.png",
+  },
+  {
+    src: "https://emmanuelgonzalez22.github.io/PF-GonzalezSosa.github.io/",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687488642/WhatsApp_Image_2023-06-22_at_23.46.17_g0sdhk.jpg",
+    mobile: true,
+  },
+  {
+    src: "https://emmanuelgonzalez22.github.io/PF-GonzalezSosa.github.io/",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687488641/WhatsApp_Image_2023-06-22_at_23.46.18_v33dwq.jpg",
+    mobile: true,
+  },
+  {
+    src: "https://emmanuelgonzalez22.github.io/PF-GonzalezSosa.github.io/",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687488640/WhatsApp_Image_2023-06-22_at_23.46.18_1_a4xzjl.jpg",
+    mobile: true,
+  },
+  {
+    src: "https://emmanuelgonzalez22.github.io/PF-GonzalezSosa.github.io/",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687488641/WhatsApp_Image_2023-06-22_at_23.46.17_1_ojfznc.jpg",
+    mobile: true,
+  },
+  {
+    src: "https://emmanuelgonzalez22.github.io/PF-GonzalezSosa.github.io/",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687488641/WhatsApp_Image_2023-06-22_at_23.46.19_fkfbnu.jpg",
+    mobile: true,
+  },
+  {
+    src: "https://emmanuelgonzalez22.github.io/practicando-mundial.github.io/",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687487029/messi_twkzjy.png",
+  },
+  {
+    src: "https://emmanuelgonzalez22.github.io/practicando-mundial.github.io/",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687488642/messi-mobile_yivcci.jpg",
+    mobile: true,
+  },
+  {
+    src: "https://emmanuelgonzalez22.github.io/practicando-mundial.github.io/",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687488641/messi2-mobile_bza4ev.jpg",
+    mobile: true,
+  },
+  {
+    src: "https://emmanuelgonzalez22.github.io/practicando-mundial.github.io/",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687486333/messi2_u3slam.png",
+  },
+  {
+    src: "https://mi-primer-app-a84ce.web.app/",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687486336/pets_y1bcfw.png",
+  },
+  {
+    src: "https://mi-primer-app-a84ce.web.app/",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687486335/pets2_ufcmz5.png",
+  },
 ];
+
+const duplicatedSlides = [...slides, ...slides];
 
 const Carousel = () => {
   return (
@@ -35,13 +88,23 @@ const Carousel = () => {
       modules={[EffectCoverflow, Keyboard]}
     >
       <div className='swiper-wrapper'>
-        {slides.map((slide) => (
+        {duplicatedSlides.map((slide, i) => (
           <SwiperSlide
-            key={slide}
+            key={`${slide.img}-${i}`}
             style={{
-              backgroundImage: `url(${slide})`,
+              backgroundImage: `url(${slide.img})`,
             }}
-          />
+            className={` ${slide.mobile ? "mobile" : ""}`}
+          >
+            <a
+              href={slide.src}
+              target='_blank'
+              rel='noopener noreferrer'
+              className={`swiper-slide swiper-slide-active swiper-slide-visible`}
+            >
+              <div className='slide-image' />
+            </a>
+          </SwiperSlide>
         ))}
       </div>
       <div className='swiper-pagination'></div>

@@ -2,16 +2,6 @@
 
 .swiper {
   padding-bottom: 100px;
-  /* .swiper-button-prev,
-  .swiper-button-next {
-    color: $tittleColor;
-    font-size: 30px;
-    opacity: 0.5;
-    transition: all 0.3s ease-in-out;
-    &:hover {
-      opacity: 1;
-    }
-  } */
   .swiper-slide {
     background-position: center;
     background-size: cover;
@@ -19,11 +9,23 @@
     height: 300px;
     -webkit-box-reflect: below 1px
       linear-gradient(transparent, transparent, #0006);
+    cursor: pointer;
+    &:active {
+      cursor: grabbing;
+    }
     @include responsive(mobile) {
       width: 230px;
     }
     @include responsive(pc) {
       width: 30%;
     }
+  }
+  .swiper-slide.mobile {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  a.swiper-slide {
+    width: 100%;
   }
 }
