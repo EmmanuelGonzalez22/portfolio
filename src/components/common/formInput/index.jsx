@@ -1,4 +1,5 @@
 import { useFormContext } from "react-hook-form";
+import { capitalizeFirstLetter } from "../../../helpers";
 
 const FormInput = ({
   label,
@@ -32,6 +33,14 @@ const FormInput = ({
       e.target.classList.add("has-value");
     } else {
       e.target.classList.remove("has-value");
+    }
+    // convierto en minuscula el valor de los email
+    if (e.target.name === "email" || e.target.name === "emailConfirm") {
+      e.target.value = e.target.value.toLowerCase();
+    }
+    // convierto en mayuscula la primer letra del nombre
+    if (e.target.name === "name" || e.target.name === "message") {
+      e.target.value = capitalizeFirstLetter(e.target.value);
     }
   };
 

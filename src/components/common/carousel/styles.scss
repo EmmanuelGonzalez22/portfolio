@@ -10,6 +10,7 @@
     -webkit-box-reflect: below 1px
       linear-gradient(transparent, transparent, #0006);
     cursor: pointer;
+    border-radius: 10px;
     &:active {
       cursor: grabbing;
     }
