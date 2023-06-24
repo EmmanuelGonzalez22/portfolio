@@ -67,8 +67,6 @@ const slides = [
   },
 ];
 
-const duplicatedSlides = [...slides, ...slides];
-
 const Carousel = () => {
   return (
     <Swiper
@@ -88,7 +86,7 @@ const Carousel = () => {
       modules={[EffectCoverflow, Keyboard]}
     >
       <div className='swiper-wrapper'>
-        {duplicatedSlides.map((slide, i) => (
+        {slides.map((slide, i) => (
           <SwiperSlide
             key={`${slide.img}-${i}`}
             style={{
