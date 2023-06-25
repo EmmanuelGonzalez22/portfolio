@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <section className='home__container'>
       <article>
-        <h1 className='home__title'>Hola, soy Emmanuel</h1>
+        <h1 className='home__title'>¡Hola! Me llamo Emmanuel</h1>
         <h2 className='home__subtitle'>Frontend Developer</h2>
         <div className='profile__container'>
           <div className='avatar__container'>
@@ -36,8 +36,14 @@ const Home = () => {
           contáctame.
         </p>
       </article>
-      <Link to='about' offset={-6.5 * 16} smooth={true} duration={500}>
-        About me
+      <Link
+        className='button'
+        to='about'
+        offset={-6.5 * 16}
+        smooth={true}
+        duration={500}
+      >
+        ¡Conoceme más!
       </Link>
     </section>
   );

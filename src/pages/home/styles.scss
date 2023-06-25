@@ -4,13 +4,18 @@
   flex-direction: column;
   align-items: center;
   .home__title {
-    margin-top: 1rem;
-    font-size: var(--h1-font-size);
+    margin: 1rem auto 0;
+    font-size: var(--h2-font-size);
     font-weight: 700;
     text-align: center;
+    border-right: 0.1em solid $textColor;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-animation: typing 4s steps(30, end) forwards,
+      blink-caret 0.5s step-end infinite alternate;
   }
   .home__subtitle {
-    font-size: var(--h2-font-size);
+    font-size: var(--h3-font-size);
     text-align: center;
     margin-bottom: 2rem;
   }
@@ -20,6 +25,8 @@
     max-width: 230px;
     width: 80%;
     margin-bottom: 2rem;
+    opacity: 0;
+    animation: showUpContainer 2s ease-in-out forwards;
     .avatar__container {
       background-color: $primaryColor;
       border-radius: 50%;
@@ -29,12 +36,8 @@
       img {
         position: relative;
         top: 10px;
-        transform: translateY(100%);
-        transition: transform 1s ease-in-out;
-      }
-      &:hover img {
-        transform: translateY(0%);
-        transition: transform 1s ease-in-out;
+        opacity: 0;
+        animation: showUp 2s ease-in-out 3s forwards;
       }
     }
     .avatar__container--circle {
@@ -49,7 +52,7 @@
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      animation: rotate 20s linear infinite;
+      animation: rotate 50s linear infinite;
       transform-origin: 170% 305%;
       &:nth-child(2) {
         top: 20%;
@@ -69,7 +72,7 @@
       &:nth-child(5) {
         top: 65%;
         left: 0;
-        transform-origin: 290% -85%;
+        transform-origin: 290% -90%;
       }
       &:nth-child(6) {
         top: 18%;
@@ -79,12 +82,17 @@
       &:nth-child(7) {
         top: 55%;
         left: 86%;
-        transform-origin: -205% -25%;
+        transform-origin: -220% -30%;
       }
       &:nth-child(8) {
         top: 75%;
         left: 75%;
         transform-origin: -140% -155%;
+      }
+      &:nth-child(9) {
+        top: 90%;
+        left: 50%;
+        transform-origin: -5% -230%;
       }
       .circle__icon {
         font-size: 2rem;
@@ -96,6 +104,38 @@
   p {
     margin-bottom: 1rem;
   }
+  .button {
+    margin-top: 1.5rem;
+    color: $textColor;
+    padding: 0.6em;
+    cursor: pointer;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    @include responsive(pc) {
+      width: 200px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #e8e8e8;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+    &:hover::before {
+      opacity: 0.2;
+    }
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+    }
+  }
 }
 
 @keyframes rotate {
@@ -104,5 +144,37 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes showUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes showUpContainer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes typing {
+  0% {
+    max-width: 0;
+  }
+  100% {
+    max-width: 350px;
+    border-right: none;
+  }
+}
+@-webkit-keyframes blink-caret {
+  50% {
+    border-color: transparent;
   }
 }
