@@ -30,7 +30,7 @@
         .social__list-decoration {
           width: 3rem;
           height: 2px;
-          background-color: $tittleColor;
+          background-color: $titleColor;
           @include responsive(pc) {
             width: 4rem;
           }
@@ -48,7 +48,7 @@
         transition: background-color 1s ease-out;
         cursor: pointer;
         &:hover {
-          background-color: $tittleColor;
+          background-color: $titleColor;
           a {
             color: $secondaryColor;
           }
