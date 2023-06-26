@@ -86,7 +86,6 @@ const Home = () => {
         >
           ¡Conversemos {whatsapp}!
         </a>
-
         <Link
           className='button'
           to='about'

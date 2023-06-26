@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   padding-bottom: 2rem;
   @include responsive(pc) {
     flex-direction: row;
@@ -11,7 +10,10 @@
   }
 
   .social__container {
-    margin-bottom: 1rem;
+    margin: 1rem 0 auto;
+    @include responsive(pc) {
+      margin: 0;
+    }
     .social__list {
       display: flex;
       justify-content: center;
@@ -200,10 +202,12 @@
     flex-wrap: wrap;
     gap: 1rem;
     width: 100%;
+    margin-bottom: auto;
     @include responsive(pc) {
       flex-direction: column;
       width: 15%;
       gap: 3rem;
+      margin: 0;
     }
     .button {
       max-width: fit-content;
