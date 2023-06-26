@@ -164,6 +164,7 @@
       }
     }
     .info__profile {
+      text-align: center;
       @include responsive(pc) {
         display: flex;
         flex-direction: column;
@@ -175,17 +176,19 @@
         margin: 1rem auto 0;
         font-size: var(--h2-font-size);
         font-weight: 700;
-        text-align: center;
         border-right: 0.1em solid $textColor;
         white-space: nowrap;
         overflow: hidden;
         -webkit-animation: typing 4s steps(30, end) forwards,
           blink-caret 0.5s step-end infinite alternate;
+        span {
+          color: #569cd6;
+          font-size: var(--h3-font-size);
+        }
       }
       .home__subtitle {
         font-size: var(--h3-font-size);
         color: $textColor;
-        text-align: center;
         margin-bottom: 2rem;
       }
       h4 {
@@ -253,7 +256,7 @@
     max-width: 0;
   }
   100% {
-    max-width: 350px;
+    max-width: 365px;
     border-right: none;
   }
 }

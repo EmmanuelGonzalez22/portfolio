@@ -62,7 +62,10 @@ const Home = () => {
         </div>
         <div className='info__profile'>
           <div>
-            <h1 className='home__title'>¡Hola! Me llamo Emmanuel</h1>
+            <h1 className='home__title'>
+              <span>{"<h1> "}</span>¡Hola! Soy Emmanuel
+              <span>{" <h1/>"}</span>
+            </h1>
             <h2 className='home__subtitle'>Front-end Developer</h2>
           </div>
           <h4>

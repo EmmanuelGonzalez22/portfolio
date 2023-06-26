@@ -8,62 +8,63 @@ import "./styles.scss";
 const slides = [
   {
     src: "https://emmanuelgonzalez22.github.io/PF-GonzalezSosa.github.io/",
-    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687487030/mountain_ew4mex.png",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793709/mountain_zh3vlj.webp",
   },
   {
     src: "https://emmanuelgonzalez22.github.io/PF-GonzalezSosa.github.io/",
-    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687487035/mountain2_yalhvb.png",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793714/mountain2_awnc4z.webp",
   },
   {
     src: "https://emmanuelgonzalez22.github.io/PF-GonzalezSosa.github.io/",
-    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687488642/WhatsApp_Image_2023-06-22_at_23.46.17_g0sdhk.jpg",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793711/WhatsApp_Image_2023-06-22_at_23.46.17_gbwiic.webp",
     mobile: true,
   },
   {
     src: "https://emmanuelgonzalez22.github.io/PF-GonzalezSosa.github.io/",
-    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687488641/WhatsApp_Image_2023-06-22_at_23.46.18_v33dwq.jpg",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793708/WhatsApp_Image_2023-06-22_at_23.46.18_1_x9ly1e.webp",
     mobile: true,
   },
   {
     src: "https://emmanuelgonzalez22.github.io/PF-GonzalezSosa.github.io/",
-    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687488640/WhatsApp_Image_2023-06-22_at_23.46.18_1_a4xzjl.jpg",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793707/WhatsApp_Image_2023-06-22_at_23.46.18_su8wr9.webp",
     mobile: true,
   },
   {
     src: "https://emmanuelgonzalez22.github.io/PF-GonzalezSosa.github.io/",
-    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687488641/WhatsApp_Image_2023-06-22_at_23.46.17_1_ojfznc.jpg",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793707/WhatsApp_Image_2023-06-22_at_23.46.19_qeinaw.webp",
     mobile: true,
   },
   {
     src: "https://emmanuelgonzalez22.github.io/PF-GonzalezSosa.github.io/",
-    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687488641/WhatsApp_Image_2023-06-22_at_23.46.19_fkfbnu.jpg",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793706/WhatsApp_Image_2023-06-22_at_23.46.17_1_wuhjbg.webp",
     mobile: true,
   },
   {
     src: "https://emmanuelgonzalez22.github.io/practicando-mundial.github.io/",
-    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687487029/messi_twkzjy.png",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793709/messi_rbpzmq.webp",
   },
   {
     src: "https://emmanuelgonzalez22.github.io/practicando-mundial.github.io/",
-    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687488642/messi-mobile_yivcci.jpg",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793708/messi2_anlg7d.webp",
     mobile: true,
   },
   {
     src: "https://emmanuelgonzalez22.github.io/practicando-mundial.github.io/",
-    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687488641/messi2-mobile_bza4ev.jpg",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793706/messi-mobile_dmmcku.webp",
     mobile: true,
   },
   {
     src: "https://emmanuelgonzalez22.github.io/practicando-mundial.github.io/",
-    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687486333/messi2_u3slam.png",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793706/messi2-mobile_jiwkry.webp",
+    mobile: true,
   },
   {
     src: "https://mi-primer-app-a84ce.web.app/",
-    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687486336/pets_y1bcfw.png",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793710/pets_rchstr.webp",
   },
   {
     src: "https://mi-primer-app-a84ce.web.app/",
-    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687486335/pets2_ufcmz5.png",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793708/pets2_nonlfu.webp",
   },
 ];
 
