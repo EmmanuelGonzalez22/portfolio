@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import { scroller } from "react-scroll";
 
@@ -12,12 +13,12 @@ const useScroll = () => {
   ];
 
   const [isScrolling, setIsScrolling] = useState(false);
+  const touchStartPosition = React.useRef(0);
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
     const handleScroll = (event) => {
       const deltaY = event.deltaY;
-
       if (!isScrolling) {
         setIsScrolling(true);
 
@@ -27,19 +28,46 @@ const useScroll = () => {
           scrollToPreviousSection();
         }
 
-        // Bloquear cambios adicionales de sección durante 650ms
         setTimeout(() => {
           setIsScrolling(false);
         }, 650);
       }
     };
 
-    // Agregar el listener del evento wheel al montar el componente
-    window.addEventListener("wheel", handleScroll);
+    const handleTouchMove = (event) => {
+      const touch = event.touches[0];
+      const deltaY = touch.clientY - touchStartPosition.current;
 
-    // Limpiar el listener del evento wheel al desmontar el componente
+      if (!isScrolling) {
+        setIsScrolling(true);
+
+        if (deltaY > 50 || deltaY < -50) {
+          if (deltaY > 0) {
+            scrollToPreviousSection(); // Invertir el orden de las funciones de desplazamiento
+          } else {
+            scrollToNextSection(); // Invertir el orden de las funciones de desplazamiento
+          }
+        }
+
+        setTimeout(() => {
+          setIsScrolling(false);
+        }, 650);
+      }
+    };
+
+    const handleTouchStart = (event) => {
+      const touch = event.touches[0];
+      touchStartPosition.current = touch.clientY;
+    };
+
+    window.addEventListener("wheel", handleScroll);
+    window.addEventListener("touchmove", handleTouchMove);
+    window.addEventListener("touchstart", handleTouchStart);
+
     return () => {
       window.removeEventListener("wheel", handleScroll);
+      window.removeEventListener("touchmove", handleTouchMove);
+      window.removeEventListener("touchstart", handleTouchStart);
       document.body.style.overflow = "auto";
     };
   }, [isScrolling]);
