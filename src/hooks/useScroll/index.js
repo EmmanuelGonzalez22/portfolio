@@ -41,7 +41,7 @@ const useScroll = () => {
       if (!isScrolling) {
         setIsScrolling(true);
 
-        if (deltaY > 10 || deltaY < -10) {
+        if (deltaY > 5 || deltaY < -5) {
           if (deltaY > 0) {
             scrollToPreviousSection(); // Invertir el orden de las funciones de desplazamiento
           } else {
