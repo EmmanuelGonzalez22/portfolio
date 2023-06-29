@@ -51,7 +51,7 @@ const useScroll = () => {
 
         setTimeout(() => {
           setIsScrolling(false);
-        }, 200);
+        }, 150);
       }
     };
 
