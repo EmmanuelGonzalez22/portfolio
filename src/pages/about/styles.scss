@@ -1,0 +1,48 @@
+@import "../../scss/_mixins.scss";
+
+.about__container {
+  .about__title {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .info__about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-areas:
+      "text text aside"
+      "text-two text-two aside"
+      "text-three text-three text-three";
+    grid-gap: 1rem;
+    align-items: center;
+    .aside__about {
+      grid-area: aside;
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to right, $backgroundColor, #a6c0ee00),
+        url("../../assets/img/alyona-grishina-BBmi4nJjKk8-unsplash.webp");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      /* div {
+        img {
+          border-radius: 50%;
+        }
+      } */
+    }
+    .text__one {
+      grid-area: text;
+    }
+    .text__two {
+      grid-area: text-two;
+    }
+    .text__three {
+      grid-area: text-three;
+      text-align: center;
+      color: $titleColor;
+      font-size: var(--bigger-font-size);
+    }
+  }
+}

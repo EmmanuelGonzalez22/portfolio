@@ -55,6 +55,7 @@
       display: flex;
       flex-direction: row-reverse;
       align-items: center;
+      width: 60%;
     }
     .svg__profile {
       margin: 0 auto;
@@ -65,14 +66,11 @@
       opacity: 0;
       animation: showUpContainer 2s ease-in-out forwards;
       .avatar__container {
-        background-color: $primaryColor;
-        border-radius: 50%;
-        overflow: hidden;
-        max-width: 300px;
-        margin: 0 auto;
-        img {
-          position: relative;
-          top: 10px;
+        .avatar__background {
+          fill: $primaryColor;
+          filter: drop-shadow(0 12px 12px #ffcc744e);
+        }
+        .avatar {
           opacity: 0;
           animation: showUp 2s ease-in-out 3s forwards;
         }
