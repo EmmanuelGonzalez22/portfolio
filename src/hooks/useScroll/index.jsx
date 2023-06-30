@@ -1,5 +1,4 @@
-import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { scroller } from "react-scroll";
 
 const useScroll = () => {
@@ -13,7 +12,7 @@ const useScroll = () => {
   ];
 
   const [isScrolling, setIsScrolling] = useState(false);
-  const touchStartPosition = React.useRef(0);
+  const touchStartPosition = useRef(0);
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -30,7 +29,7 @@ const useScroll = () => {
 
         setTimeout(() => {
           setIsScrolling(false);
-        }, 650);
+        }, 300);
       }
     };
 
@@ -41,17 +40,17 @@ const useScroll = () => {
       if (!isScrolling) {
         setIsScrolling(true);
 
-        if (deltaY > 10 || deltaY < -10) {
+        if (deltaY > 15 || deltaY < -15) {
           if (deltaY > 0) {
-            scrollToPreviousSection(); // Invertir el orden de las funciones de desplazamiento
+            scrollToPreviousSection();
           } else {
-            scrollToNextSection(); // Invertir el orden de las funciones de desplazamiento
+            scrollToNextSection();
           }
         }
 
         setTimeout(() => {
           setIsScrolling(false);
-        }, 200);
+        }, 150);
       }
     };
 
