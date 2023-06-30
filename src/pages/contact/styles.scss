@@ -1,7 +1,7 @@
 @import "../../scss/mixins";
 
 .contact__container {
-  /*   min-height: calc(100vh - 6rem); */
+  padding-top: 1rem;
   .contact__title {
     font-size: var(--h1-font-size);
     font-weight: 700;
