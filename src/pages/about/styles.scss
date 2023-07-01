@@ -2,9 +2,17 @@
 
 .about__container {
   padding-top: 1rem;
+  h3 {
+    font-size: var(--smaller-font-size);
+    color: $textColor;
+    text-align: center;
+    span {
+      color: $titleColor;
+    }
+  }
   .about__title {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
   .info__about-container {
     display: grid;
@@ -21,7 +29,13 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(to right, $backgroundColor, #a6c0ee00),
+      background: linear-gradient(
+          to right,
+          rgba(43, 46, 59, 0.97),
+          rgba(43, 46, 59, 0.92),
+          rgba(43, 46, 59, 0.82),
+          rgba(43, 46, 59, 0.7607843137)
+        ),
         url("../../assets/img/alyona-grishina-BBmi4nJjKk8-unsplash.webp");
       background-size: cover;
       background-position: center;
@@ -43,8 +57,7 @@
       grid-area: text-three;
       text-align: center;
       color: $titleColor;
-      margin-top: 2rem;
-      font-size: var(--bigger-font-size);
+      font-size: var(--h3-font-size);
     }
   }
 
