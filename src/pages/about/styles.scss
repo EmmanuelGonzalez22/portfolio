@@ -1,7 +1,10 @@
 @import "../../scss/_mixins.scss";
 
 .about__container {
+  position: relative;
   padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
   h3 {
     font-size: var(--smaller-font-size);
     color: $textColor;
@@ -15,52 +18,46 @@
     margin-bottom: 2rem;
   }
   .info__about-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-    grid-template-areas:
-      "text text aside"
-      "text-two text-two aside"
-      "text-three text-three text-three";
-    grid-gap: 1rem;
-    align-items: center;
-    .aside__about {
-      grid-area: aside;
-      height: 50vh;
+    margin: auto 0;
+    @include responsive(pc) {
+      width: 50%;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
-      background: linear-gradient(
-          to right,
-          rgba(43, 46, 59, 0.97),
-          rgba(43, 46, 59, 0.92),
-          rgba(43, 46, 59, 0.82),
-          rgba(43, 46, 59, 0.7607843137)
-        ),
-        url("../../assets/img/alyona-grishina-BBmi4nJjKk8-unsplash.webp");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-
-      /* div {
-        img {
-          border-radius: 50%;
-        }
-      } */
+      gap: 2rem;
     }
-    .text__one {
-      grid-area: text;
-    }
-    .text__two {
-      grid-area: text-two;
+    .info__about {
+      font-size: var(--smaller-font-size);
+      width: 50%;
+      margin-bottom: 2rem;
+      .text__one {
+        margin-bottom: 2rem;
+      }
     }
     .text__three {
-      grid-area: text-three;
       text-align: center;
       color: $titleColor;
-      font-size: var(--h3-font-size);
     }
   }
-
+  .about__background {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background: linear-gradient(
+        to right,
+        rgb(43, 46, 59),
+        rgba(43, 46, 59, 0.92),
+        rgba(43, 46, 59, 0.82),
+        rgba(43, 46, 59, 0.7607843137)
+      ),
+      url("../../assets/img/alyona-grishina-BBmi4nJjKk8-unsplash.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 50%;
+  }
   .button {
     margin: 1rem auto 0;
     display: block;

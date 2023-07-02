@@ -24,7 +24,7 @@ const NavBar = () => {
           spy={true}
           activeClass='active'
           to='home'
-          offset={-6.5 * 16}
+          offset={-6.5 * 14}
           onClick={removeShowMenu}
         >
           Emmanuel <span>González</span>
@@ -35,7 +35,7 @@ const NavBar = () => {
               spy={true}
               activeClass='active'
               to='home'
-              offset={-6.5 * 16}
+              offset={-6.5 * 14}
               onClick={removeShowMenu}
             >
               Home
@@ -46,7 +46,7 @@ const NavBar = () => {
               spy={true}
               activeClass='active'
               to='about'
-              offset={-6.5 * 16}
+              offset={-6.5 * 14}
               onClick={removeShowMenu}
             >
               About
@@ -57,7 +57,7 @@ const NavBar = () => {
               spy={true}
               activeClass='active'
               to='services'
-              offset={-6.5 * 16}
+              offset={-6.5 * 14}
               onClick={removeShowMenu}
             >
               Services
@@ -68,7 +68,7 @@ const NavBar = () => {
               spy={true}
               activeClass='active'
               to='projects'
-              offset={-6.5 * 16}
+              offset={-6.5 * 14}
               onClick={removeShowMenu}
             >
               Projects
@@ -79,7 +79,7 @@ const NavBar = () => {
               spy={true}
               activeClass='active'
               to='contact'
-              offset={-6.5 * 16}
+              offset={-6.5 * 14}
               onClick={removeShowMenu}
             >
               Contact

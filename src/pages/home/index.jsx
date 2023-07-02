@@ -1,6 +1,6 @@
 import { Link } from "react-scroll";
 import { useIcons } from "../../hooks";
-import avatar from "../../assets/img/avatar.svg";
+import avatar from "../../assets/img/avatar-svg.svg";
 import "./styles.scss";
 
 const Home = () => {

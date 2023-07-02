@@ -62,7 +62,7 @@
       position: relative;
       max-width: 230px;
       width: 80%;
-      margin-bottom: 2rem;
+      /* margin-bottom: 2rem; */
       opacity: 0;
       animation: showUpContainer 2s ease-in-out forwards;
       .avatar__container {
@@ -187,10 +187,10 @@
       .home__subtitle {
         font-size: var(--h3-font-size);
         color: $textColor;
-        margin-bottom: 2rem;
+        margin-bottom: 0.5rem;
       }
       h4 {
-        margin-bottom: 1rem;
+        margin-bottom: 0.7rem;
         color: $textColor;
         font-weight: 400;
       }

@@ -1,8 +1,8 @@
 import { Element } from "react-scroll";
+import { useInView } from "react-intersection-observer";
 import { NavBar, Footer } from "./components";
 import { About, Contact, Home, Projects, Services } from "./pages";
 import { useScroll } from "./hooks";
-import { useInView } from "react-intersection-observer";
 
 function App() {
   useScroll();
