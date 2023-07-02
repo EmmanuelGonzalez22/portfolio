@@ -147,7 +147,7 @@ const Home = () => {
         >
           ¡Conversemos {whatsapp}!
         </a>
-        <Link className='button' to='about' offset={-6.5 * 16}>
+        <Link className='button' to='about' offset={-6.5 * 14}>
           ¡Conóceme más!
         </Link>
       </article>

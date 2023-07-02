@@ -20,13 +20,15 @@ const About = () => {
             mis conocimientos. Si tienes alguna pregunta, por favor contáctame.
           </p>
         </div>
-        <p className='text__three'>
-          Enfocado en cada día aprender algo nuevo, y ser un poquito mejor que
-          ayer.
-        </p>
-        <Link to='contact' offset={-6.5 * 16} className='button'>
-          ¡Contactame!
-        </Link>
+        <div className='button__about'>
+          <p className='text__three'>
+            Enfocado en cada día aprender algo nuevo, y ser un poquito mejor que
+            ayer.
+          </p>
+          <Link to='contact' offset={-6.5 * 14} className='button'>
+            ¡Contactame!
+          </Link>
+        </div>
       </article>
       <div className='about__background'></div>
     </section>
