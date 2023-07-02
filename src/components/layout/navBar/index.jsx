@@ -22,11 +22,9 @@ const NavBar = () => {
         <Link
           className='logo__container'
           spy={true}
-          smooth={true}
-          duration={500}
           activeClass='active'
           to='home'
-          offset={-6.5 * 16}
+          offset={-6.5 * 14}
           onClick={removeShowMenu}
         >
           Emmanuel <span>González</span>
@@ -35,11 +33,9 @@ const NavBar = () => {
           <li className='nav__item'>
             <Link
               spy={true}
-              smooth={true}
-              duration={500}
               activeClass='active'
               to='home'
-              offset={-6.5 * 16}
+              offset={-6.5 * 14}
               onClick={removeShowMenu}
             >
               Home
@@ -48,11 +44,9 @@ const NavBar = () => {
           <li className='nav__item'>
             <Link
               spy={true}
-              smooth={true}
-              duration={500}
               activeClass='active'
               to='about'
-              offset={-6.5 * 16}
+              offset={-6.5 * 14}
               onClick={removeShowMenu}
             >
               About
@@ -61,11 +55,9 @@ const NavBar = () => {
           <li className='nav__item'>
             <Link
               spy={true}
-              smooth={true}
-              duration={500}
               activeClass='active'
               to='services'
-              offset={-6.5 * 16}
+              offset={-6.5 * 14}
               onClick={removeShowMenu}
             >
               Services
@@ -74,11 +66,9 @@ const NavBar = () => {
           <li className='nav__item'>
             <Link
               spy={true}
-              smooth={true}
-              duration={500}
               activeClass='active'
               to='projects'
-              offset={-6.5 * 16}
+              offset={-6.5 * 14}
               onClick={removeShowMenu}
             >
               Projects
@@ -87,11 +77,9 @@ const NavBar = () => {
           <li className='nav__item'>
             <Link
               spy={true}
-              smooth={true}
-              duration={500}
               activeClass='active'
               to='contact'
-              offset={-6.5 * 16}
+              offset={-6.5 * 14}
               onClick={removeShowMenu}
             >
               Contact

@@ -1,0 +1,101 @@
+@import "../../scss/_mixins.scss";
+
+.about__container {
+  position: relative;
+  padding-top: 1rem;
+  @include responsive(pc) {
+    display: grid;
+    align-content: center;
+    padding-left: 10rem;
+  }
+  h3 {
+    font-size: var(--smaller-font-size);
+    color: $textColor;
+    text-align: center;
+    @include responsive(pc) {
+      width: 40%;
+    }
+    span {
+      color: $titleColor;
+    }
+  }
+  .about__title {
+    font-size: var(--h1-font-size);
+    text-align: center;
+    @include responsive(pc) {
+      width: 40%;
+      margin-bottom: 3rem;
+    }
+  }
+  .info__about-container {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+    height: 100%;
+    @include responsive(tablet) {
+      justify-content: center;
+      gap: 5rem;
+    }
+    @include responsive(mobile) {
+      justify-content: space-evenly;
+      gap: 0;
+    }
+    @include responsive(pc) {
+      width: 40%;
+      align-items: center;
+      gap: 2rem;
+      margin: 0;
+    }
+    .info__about {
+      font-size: var(--smaller-font-size);
+      width: 50%;
+      @include responsive(pc) {
+        width: 100%;
+      }
+      .text__one {
+        margin-bottom: 2rem;
+      }
+    }
+    .button__about {
+      @include responsive(tablet) {
+        width: 50%;
+      }
+      @include responsive(mobile) {
+        width: 100%;
+        padding-bottom: 2rem;
+      }
+      .text__three {
+        text-align: center;
+        color: $titleColor;
+        margin-top: auto;
+      }
+    }
+  }
+  .about__background {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background: linear-gradient(
+        to right,
+        rgb(43, 46, 59),
+        rgba(43, 46, 59, 0.92),
+        rgba(43, 46, 59, 0.82),
+        rgba(43, 46, 59, 0.7607843137)
+      ),
+      url("../../assets/img/alyona-grishina-BBmi4nJjKk8-unsplash.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 50%;
+  }
+  .button {
+    margin: 1rem auto 0;
+    display: block;
+    max-width: fit-content;
+    @include responsive(pc) {
+      max-width: 200px;
+    }
+  }
+}

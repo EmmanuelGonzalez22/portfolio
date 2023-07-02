@@ -7,6 +7,7 @@
   @include responsive(pc) {
     flex-direction: row;
     justify-content: space-around;
+    padding-bottom: 0;
   }
 
   .social__container {
@@ -55,24 +56,21 @@
       display: flex;
       flex-direction: row-reverse;
       align-items: center;
+      width: 60%;
     }
     .svg__profile {
       margin: 0 auto;
       position: relative;
       max-width: 230px;
       width: 80%;
-      margin-bottom: 2rem;
       opacity: 0;
       animation: showUpContainer 2s ease-in-out forwards;
       .avatar__container {
-        background-color: $primaryColor;
-        border-radius: 50%;
-        overflow: hidden;
-        max-width: 300px;
-        margin: 0 auto;
-        img {
-          position: relative;
-          top: 10px;
+        .avatar__background {
+          fill: $primaryColor;
+          filter: drop-shadow(0 12px 12px #ffcc744e);
+        }
+        .avatar {
           opacity: 0;
           animation: showUp 2s ease-in-out 3s forwards;
         }
@@ -189,10 +187,10 @@
       .home__subtitle {
         font-size: var(--h3-font-size);
         color: $textColor;
-        margin-bottom: 2rem;
+        margin-bottom: 0.5rem;
       }
       h4 {
-        margin-bottom: 1rem;
+        margin-bottom: 0.7rem;
         color: $textColor;
         font-weight: 400;
       }

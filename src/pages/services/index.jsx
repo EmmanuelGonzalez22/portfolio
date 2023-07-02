@@ -1,3 +1,4 @@
+import "./styles.scss";
 const Services = () => {
   return (
     <section>
