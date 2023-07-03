@@ -129,27 +129,27 @@ const Home = () => {
           <h4>
             Innovación, pasión y calidad en cada línea de código que escribo.
           </h4>
+          <div className='buttons__profile'>
+            <a
+              className='button'
+              href='https://www.dropbox.com/s/ibfr4yag36w4czp/Cv%20Emmanuel%20Gonzalez.pdf?dl=0'
+              download
+              target='_blank'
+            >
+              Descargar CV {download}
+            </a>
+            <a
+              href='https://wa.me/5492944690230/?text=%C2%A1Hola%21%20%C2%BFEst%C3%A1s%20buscando%20un%20desarrollador%20web%20altamente%20motivado%20y%20comprometido%3F%20%C2%A1Escr%C3%ADbeme%20y%20hablemos%20sobre%20las%20oportunidades%20actuales%20y%20c%C3%B3mo%20puedo%20contribuir%20al%20crecimiento%20de%20tu%20organizaci%C3%B3n%21'
+              target='_blank'
+              className='button'
+            >
+              ¡Conversemos {whatsapp}!
+            </a>
+            <Link className='button' to='about' offset={-6.5 * 14}>
+              ¡Conóceme más!
+            </Link>
+          </div>
         </div>
-      </article>
-      <article className='buttons__container'>
-        <a
-          className='button'
-          href='https://www.dropbox.com/s/ibfr4yag36w4czp/Cv%20Emmanuel%20Gonzalez.pdf?dl=0'
-          download
-          target='_blank'
-        >
-          Descargar CV {download}
-        </a>
-        <a
-          href='https://wa.me/5492944690230/?text=%C2%A1Hola%21%20%C2%BFEst%C3%A1s%20buscando%20un%20desarrollador%20web%20altamente%20motivado%20y%20comprometido%3F%20%C2%A1Escr%C3%ADbeme%20y%20hablemos%20sobre%20las%20oportunidades%20actuales%20y%20c%C3%B3mo%20puedo%20contribuir%20al%20crecimiento%20de%20tu%20organizaci%C3%B3n%21'
-          target='_blank'
-          className='button'
-        >
-          ¡Conversemos {whatsapp}!
-        </a>
-        <Link className='button' to='about' offset={-6.5 * 14}>
-          ¡Conóceme más!
-        </Link>
       </article>
     </section>
   );

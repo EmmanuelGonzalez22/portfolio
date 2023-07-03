@@ -6,7 +6,7 @@
   padding-bottom: 2rem;
   @include responsive(pc) {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding-bottom: 0;
   }
 
@@ -52,19 +52,23 @@
   }
 
   .profile__container {
+    margin-bottom: auto;
     @include responsive(pc) {
+      margin-bottom: 0;
       display: flex;
       flex-direction: row-reverse;
       align-items: center;
-      width: 60%;
     }
+
     .svg__profile {
       margin: 0 auto;
       position: relative;
-      max-width: 230px;
-      width: 80%;
+      width: 230px;
       opacity: 0;
       animation: showUpContainer 2s ease-in-out forwards;
+      @include responsive(pc) {
+        width: 500px;
+      }
       .avatar__container {
         .avatar__background {
           fill: $primaryColor;
@@ -89,10 +93,18 @@
         overflow: hidden;
         animation: rotate 50s linear infinite;
         transform-origin: 170% 305%;
+        @include responsive(pc) {
+          width: 50px;
+          height: 50px;
+          transform-origin: 240% 475%;
+        }
         &:nth-child(2) {
           top: 20%;
           left: 0;
           transform-origin: 290% 185%;
+          @include responsive(pc) {
+            transform-origin: 415% 305%;
+          }
           svg {
             color: #2965f1;
           }
@@ -101,6 +113,9 @@
           top: -2%;
           left: 62%;
           transform-origin: -70% 305%;
+          @include responsive(pc) {
+            transform-origin: -95% 480%;
+          }
           svg {
             color: #7952b3;
           }
@@ -109,6 +124,9 @@
           top: 80%;
           left: 15%;
           transform-origin: 200% -195%;
+          @include responsive(pc) {
+            transform-origin: 310% -285%;
+          }
           svg {
             color: #61dbfb;
           }
@@ -117,6 +135,9 @@
           top: 65%;
           left: 0;
           transform-origin: 290% -90%;
+          @include responsive(pc) {
+            transform-origin: 440% -130%;
+          }
           svg {
             color: #cb3837;
           }
@@ -125,6 +146,9 @@
           top: 18%;
           left: 83%;
           transform-origin: -200% 195%;
+          @include responsive(pc) {
+            transform-origin: -315% 315%;
+          }
           svg {
             color: #f7df1e;
           }
@@ -133,6 +157,9 @@
           top: 55%;
           left: 86%;
           transform-origin: -220% -30%;
+          @include responsive(pc) {
+            transform-origin: -360% -25%;
+          }
           svg {
             color: #e34f26;
           }
@@ -141,6 +168,9 @@
           top: 75%;
           left: 75%;
           transform-origin: -140% -155%;
+          @include responsive(pc) {
+            transform-origin: -225% -235%;
+          }
           svg {
             color: #f05032;
           }
@@ -149,6 +179,9 @@
           top: 90%;
           left: 50%;
           transform-origin: -5% -230%;
+          @include responsive(pc) {
+            transform-origin: -10% -385%;
+          }
           svg {
             color: white;
           }
@@ -161,11 +194,13 @@
         }
       }
     }
+
     .info__profile {
       text-align: center;
       @include responsive(pc) {
         display: flex;
         flex-direction: column;
+        align-items: center;
         width: 60%;
         height: 40vh;
         gap: 2rem;
@@ -193,30 +228,27 @@
         margin-bottom: 0.7rem;
         color: $textColor;
         font-weight: 400;
+        @include responsive(pc) {
+          width: 70%;
+        }
       }
-    }
-  }
-
-  .buttons__container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    width: 100%;
-    margin-bottom: auto;
-    @include responsive(pc) {
-      flex-direction: column;
-      width: 15%;
-      gap: 3rem;
-      margin: 0;
-    }
-    .button {
-      max-width: fit-content;
-      @include responsive(pc) {
-        max-width: 200px;
-      }
-      svg {
-        color: #25d366;
+      .buttons__profile {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        @include responsive(pc) {
+          width: 90%;
+        }
+        .button {
+          max-width: fit-content;
+          @include responsive(pc) {
+            max-width: 200px;
+          }
+          svg {
+            color: #25d366;
+          }
+        }
       }
     }
   }
