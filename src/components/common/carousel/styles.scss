@@ -25,7 +25,10 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    /* background-color: $primaryColor; */
+  }
+  .mobile .swiper-slide-shadow-left,
+  .mobile .swiper-slide-shadow-right {
+    background-image: none;
   }
   a.swiper-slide {
     width: 100%;
