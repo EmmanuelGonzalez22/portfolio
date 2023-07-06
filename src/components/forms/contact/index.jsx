@@ -6,7 +6,7 @@ import "./styles.scss";
 const ContactForm = ({ onSubmit }) => {
   const methods = useForm();
   const { handleSubmit } = methods;
-  const { whatsapp } = useIcons();
+  const Icon = useIcons("icon");
 
   return (
     <FormProvider {...methods}>
@@ -75,7 +75,7 @@ const ContactForm = ({ onSubmit }) => {
             target='_blank'
             className='button'
           >
-            ¡Conversemos por {whatsapp}!
+            ¡Conversemos por <Icon icon='fab fa-whatsapp' />!
           </a>
         </div>
       </form>

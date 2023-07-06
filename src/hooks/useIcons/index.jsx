@@ -42,26 +42,11 @@ const useIcons = (className) => {
     };
   }, []);
 
-  const icons = {
-    github: <FontAwesomeIcon icon={faGithub} className={className} />,
-    instagram: <FontAwesomeIcon icon={faInstagram} className={className} />,
-    linkedin: <FontAwesomeIcon icon={faLinkedin} className={className} />,
-    whatsapp: <FontAwesomeIcon icon={faWhatsapp} className={className} />,
-    react: <FontAwesomeIcon icon={faReact} className={className} />,
-    js: <FontAwesomeIcon icon={faJsSquare} className={className} />,
-    html: <FontAwesomeIcon icon={faHtml5} className={className} />,
-    css: <FontAwesomeIcon icon={faCss3Alt} className={className} />,
-    sass: <FontAwesomeIcon icon={faSass} className={className} />,
-    bootstrap: <FontAwesomeIcon icon={faBootstrap} className={className} />,
-    git: <FontAwesomeIcon icon={faGitAlt} className={className} />,
-    npm: <FontAwesomeIcon icon={faNpm} className={className} />,
-    githubSquare: (
-      <FontAwesomeIcon icon={faGithubSquare} className={className} />
-    ),
-    download: <FontAwesomeIcon icon={faArrowDown} className={className} />,
-  };
+  const Icon = ({ icon }) => (
+    <FontAwesomeIcon icon={icon} className={className} />
+  );
 
-  return icons;
+  return Icon;
 };
 
 export { useIcons };

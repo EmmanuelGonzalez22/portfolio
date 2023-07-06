@@ -4,28 +4,14 @@ import avatar from "../../assets/img/avatar-svg.svg";
 import "./styles.scss";
 
 const Home = () => {
-  const {
-    bootstrap,
-    css,
-    git,
-    githubSquare,
-    html,
-    js,
-    npm,
-    react,
-    sass,
-    github,
-    linkedin,
-    whatsapp,
-    download,
-  } = useIcons("circle__icon");
+  const Icon = useIcons("circle__icon");
   return (
     <section className='home__container'>
       <article className='social__container'>
         <ul className='social__list'>
           <li className='social__item'>
             <a href='https://github.com/EmmanuelGonzalez22' target='_blank'>
-              {github}
+              <Icon icon='fab fa-github' />
             </a>
           </li>
           <li className='social__item'>
@@ -33,7 +19,7 @@ const Home = () => {
               href='https://www.linkedin.com/in/emmanuel-gonzalez-935470227/'
               target='_blank'
             >
-              {linkedin}
+              <Icon icon='fab fa-linkedin' />
             </a>
           </li>
           <li className='social__item'>
@@ -41,7 +27,7 @@ const Home = () => {
               href='https://wa.me/5492944690230/?text=%C2%A1Hola%21%20%C2%BFEst%C3%A1s%20buscando%20un%20desarrollador%20web%20altamente%20motivado%20y%20comprometido%3F%20%C2%A1Escr%C3%ADbeme%20y%20hablemos%20sobre%20las%20oportunidades%20actuales%20y%20c%C3%B3mo%20puedo%20contribuir%20al%20crecimiento%20de%20tu%20organizaci%C3%B3n%21'
               target='_blank'
             >
-              {whatsapp}
+              <Icon icon='fab fa-whatsapp' />
             </a>
           </li>
         </ul>
@@ -108,15 +94,33 @@ const Home = () => {
               </defs>
             </svg>
           </div>
-          <div className='avatar__container--circle'>{css}</div>
-          <div className='avatar__container--circle'>{bootstrap}</div>
-          <div className='avatar__container--circle'>{react}</div>
-          <div className='avatar__container--circle'>{npm}</div>
-          <div className='avatar__container--circle'>{js}</div>
-          <div className='avatar__container--circle'>{html}</div>
-          <div className='avatar__container--circle'>{git}</div>
-          <div className='avatar__container--circle'>{githubSquare}</div>
-          <div className='avatar__container--circle'>{sass}</div>
+          <div className='avatar__container--circle'>
+            <Icon icon='fab fa-css3-alt' />
+          </div>
+          <div className='avatar__container--circle'>
+            <Icon icon='fab fa-bootstrap' />
+          </div>
+          <div className='avatar__container--circle'>
+            <Icon icon='fab fa-react' />
+          </div>
+          <div className='avatar__container--circle'>
+            <Icon icon='fab fa-npm' />
+          </div>
+          <div className='avatar__container--circle'>
+            <Icon icon='fab fa-js-square' />
+          </div>
+          <div className='avatar__container--circle'>
+            <Icon icon='fab fa-html5' />
+          </div>
+          <div className='avatar__container--circle'>
+            <Icon icon='fab fa-git-alt' />
+          </div>
+          <div className='avatar__container--circle'>
+            <Icon icon='fab fa-github-square' />
+          </div>
+          <div className='avatar__container--circle'>
+            <Icon icon='fab fa-sass' />
+          </div>
         </div>
         <div className='info__profile'>
           <div>
@@ -136,14 +140,14 @@ const Home = () => {
               download
               target='_blank'
             >
-              Descargar CV {download}
+              Descargar CV <Icon icon='fas fa-arrow-down' />
             </a>
             <a
               href='https://wa.me/5492944690230/?text=%C2%A1Hola%21%20%C2%BFEst%C3%A1s%20buscando%20un%20desarrollador%20web%20altamente%20motivado%20y%20comprometido%3F%20%C2%A1Escr%C3%ADbeme%20y%20hablemos%20sobre%20las%20oportunidades%20actuales%20y%20c%C3%B3mo%20puedo%20contribuir%20al%20crecimiento%20de%20tu%20organizaci%C3%B3n%21'
               target='_blank'
               className='button'
             >
-              ¡Conversemos {whatsapp}!
+              ¡Conversemos <Icon icon='fab fa-whatsapp' />!
             </a>
             <Link className='button' to='about' offset={-6.5 * 14}>
               ¡Conóceme más!

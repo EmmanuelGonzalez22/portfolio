@@ -40,7 +40,7 @@ const useScroll = () => {
       if (!isScrolling) {
         setIsScrolling(true);
 
-        if (deltaY > 10 || deltaY < -10) {
+        if (deltaY > 15 || deltaY < -15) {
           if (deltaY > 0) {
             scrollToPreviousSection();
           } else {
@@ -50,7 +50,7 @@ const useScroll = () => {
 
         setTimeout(() => {
           setIsScrolling(false);
-        }, 200);
+        }, 20);
       }
     };
 
