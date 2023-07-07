@@ -16,7 +16,14 @@ import {
   faNpm,
   faGithubSquare,
 } from "@fortawesome/free-brands-svg-icons";
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowDown,
+  faCode,
+  faMobileScreen,
+  faCopyright,
+  faPaintBrush,
+  faChevronDown,
+} from "@fortawesome/free-solid-svg-icons";
 
 const useIcons = (className) => {
   useEffect(() => {
@@ -34,7 +41,12 @@ const useIcons = (className) => {
       faGitAlt,
       faNpm,
       faGithubSquare,
-      faArrowDown
+      faArrowDown,
+      faCode,
+      faMobileScreen,
+      faCopyright,
+      faPaintBrush,
+      faChevronDown
     );
 
     return () => {
