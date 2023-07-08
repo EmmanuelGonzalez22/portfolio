@@ -84,11 +84,14 @@
         rgba(43, 46, 59, 0.82),
         rgba(43, 46, 59, 0.7607843137)
       ),
-      url("../../assets/img/alyona-grishina-BBmi4nJjKk8-unsplash.webp");
+      url("../../assets/img/yo.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 50%;
+    @include responsive(pc) {
+      width: 55%;
+    }
   }
   .button {
     margin: 1rem auto 0;

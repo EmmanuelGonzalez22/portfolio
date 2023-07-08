@@ -40,7 +40,7 @@ const Accordion = () => {
   };
 
   return (
-    <article className='accordion__container'>
+    <ul className='accordion__list'>
       {faqs.map((faq, index) => {
         return (
           <AccordionItem
@@ -51,7 +51,7 @@ const Accordion = () => {
           />
         );
       })}
-    </article>
+    </ul>
   );
 };
 

@@ -1,5 +1,4 @@
 import { Link } from "react-scroll";
-import perfil from "../../assets/img/alyona-grishina-BBmi4nJjKk8-unsplash.webp";
 import "./styles.scss";
 const About = () => {
   return (

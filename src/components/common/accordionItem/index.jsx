@@ -8,7 +8,7 @@ const AccordionItem = ({ handleToggle, active, faq }) => {
   const { header, id, text, svg } = faq;
 
   return (
-    <div className='accordionItem'>
+    <li className='accordionItem'>
       <header
         className={`accordionItem__header ${active === id ? "active" : ""}`}
         onClick={() => handleToggle(id)}
@@ -32,7 +32,7 @@ const AccordionItem = ({ handleToggle, active, faq }) => {
       >
         <p>{text}</p>
       </div>
-    </div>
+    </li>
   );
 };
 

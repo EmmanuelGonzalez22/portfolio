@@ -1,5 +1,5 @@
 import { Link } from "react-scroll";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import "./styles.scss";
 
 const NavBar = () => {
@@ -15,6 +15,24 @@ const NavBar = () => {
     menuRef.current.classList.remove("show");
     toggleMenuRef.current.classList.remove("show");
   };
+
+  useEffect(() => {
+    const handleClickOutsideMenu = (event) => {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        !toggleMenuRef.current.contains(event.target)
+      ) {
+        removeShowMenu();
+      }
+    };
+
+    document.addEventListener("click", handleClickOutsideMenu);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutsideMenu);
+    };
+  }, []);
 
   return (
     <header className='header__main'>

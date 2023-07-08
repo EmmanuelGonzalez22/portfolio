@@ -8,11 +8,13 @@
     border-radius: 6px;
     cursor: pointer;
     background: $primaryColor;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     transition: 0.3s;
-    &:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(28, 28, 28, 0.3);
+    @include responsive(pc) {
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(28, 28, 28, 0.3);
+      }
     }
     .icon__svg {
       margin-right: 10px;
