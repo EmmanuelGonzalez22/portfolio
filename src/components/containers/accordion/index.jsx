@@ -6,27 +6,27 @@ const Accordion = () => {
   const faqs = [
     {
       id: 1,
-      header: "Web development",
-      text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.`,
+      header: "Desarrollo web",
+      text: `A través de un enfoque personalizado, desarrollo sitios web con las últimas tecnologías y tendencias del mercado. Sitios rápidos, seguros y escalables, con un rendimiento excepcional y una experiencia de usuario sin problemas.`,
       svg: "fas fa-code",
     },
     {
       id: 2,
-      header: "Responsive design",
-      text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.`,
+      header: "Diseño responsive",
+      text: `En un mundo cada vez más móvil, es crucial que tu sitio web se adapte a cualquier dispositivo. Mi enfoque se centra en el diseño responsive, creando sitios web que se ajustan y se ven increíbles en todas las pantallas, brindando una excelente experiencia de usuario.`,
       svg: "fas fa-mobile-screen",
     },
     {
       id: 3,
-      header: "Copywriting & content creation",
-      text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.`,
-      svg: " fas fa-copyright",
+      header: "Optimización SEO",
+      text: `Mejoro la visibilidad y el posicionamiento de tu sitio web en los motores de búsqueda. A través de la optimización técnica, la estructura de URL, la optimización de palabras clave y la mejora de la velocidad de carga, te ayudo a aumentar el tráfico orgánico, para atraer más visitantes.`,
+      svg: "fas fa-chart-line",
     },
     {
       id: 4,
-      header: "Logo design & branding",
-      text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.`,
-      svg: " fas fa-paint-brush",
+      header: "Integración de API's y servicios externos",
+      text: `Conexión de sitios web con API y servicios externos, como redes sociales, sistemas de pago o servicios de terceros, para ampliar la funcionalidad y aprovechar recursos adicionales.`,
+      svg: "fas fa-link",
     },
   ];
   const [active, setActive] = useState(null);

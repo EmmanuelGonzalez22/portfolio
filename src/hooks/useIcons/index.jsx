@@ -15,6 +15,7 @@ import {
   faGitAlt,
   faNpm,
   faGithubSquare,
+  faNode,
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faArrowDown,
@@ -23,6 +24,8 @@ import {
   faCopyright,
   faPaintBrush,
   faChevronDown,
+  faChartLine,
+  faLink,
 } from "@fortawesome/free-solid-svg-icons";
 
 const useIcons = (className) => {
@@ -46,7 +49,10 @@ const useIcons = (className) => {
       faMobileScreen,
       faCopyright,
       faPaintBrush,
-      faChevronDown
+      faChevronDown,
+      faNode,
+      faChartLine,
+      faLink
     );
 
     return () => {

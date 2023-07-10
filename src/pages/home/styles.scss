@@ -186,11 +186,33 @@
             color: white;
           }
         }
+        &:nth-child(10) {
+          top: 45%;
+          left: -5%;
+          transform-origin: 310% 55%;
+          @include responsive(pc) {
+            transform-origin: 540% 55%;
+          }
+          svg {
+            color: #cc6699;
+          }
+        }
+        &:nth-child(11) {
+          top: 42%;
+          left: 88%;
+          transform-origin: -235% 58%;
+          @include responsive(pc) {
+            transform-origin: -395% 120%;
+          }
+          svg {
+            color: #cc6699;
+          }
+        }
         .circle__icon {
           font-size: 2rem;
           width: 50%;
           animation: rotate 50s linear infinite reverse;
-          color: #cc6699;
+          color: #43853d;
         }
       }
     }

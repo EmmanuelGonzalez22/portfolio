@@ -8,20 +8,7 @@
     align-content: center;
     padding-left: 10rem;
   }
-  h3 {
-    font-size: var(--smaller-font-size);
-    color: $textColor;
-    text-align: center;
-    @include responsive(pc) {
-      width: 40%;
-    }
-    span {
-      color: $titleColor;
-    }
-  }
-  .about__title {
-    font-size: var(--h1-font-size);
-    text-align: center;
+  .title__container {
     @include responsive(pc) {
       width: 40%;
       margin-bottom: 3rem;

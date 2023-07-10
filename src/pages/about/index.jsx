@@ -3,10 +3,12 @@ import "./styles.scss";
 const About = () => {
   return (
     <section className='about__container'>
-      <h3>
-        Sobre <span>mí</span>
-      </h3>
-      <h1 className='about__title'>Emmanuel González</h1>
+      <article className='title__container'>
+        <h1 className='about__title'>Emmanuel González</h1>
+        <h3>
+          Sobre <span>mí</span>
+        </h3>
+      </article>
       <article className='info__about-container'>
         <div className='info__about'>
           <p className='text__one'>

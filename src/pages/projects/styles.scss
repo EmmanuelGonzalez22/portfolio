@@ -6,20 +6,7 @@
   justify-content: center;
   align-items: center;
   padding: 1rem 0 0;
-  h3 {
-    font-size: var(--smaller-font-size);
-    color: $textColor;
-    text-align: center;
-    span {
-      color: $titleColor;
-    }
-  }
-
   .projects__title {
-    font-size: var(--h1-font-size);
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 4rem;
     @include responsive(pc) {
       margin-bottom: auto;
     }
