@@ -67,7 +67,7 @@ const NavBar = () => {
               offset={-6.5 * 14}
               onClick={removeShowMenu}
             >
-              About
+              Sobre mí
             </Link>
           </li>
           <li className='nav__item'>
@@ -78,7 +78,7 @@ const NavBar = () => {
               offset={-6.5 * 14}
               onClick={removeShowMenu}
             >
-              Services
+              Servicios
             </Link>
           </li>
           <li className='nav__item'>
@@ -89,7 +89,7 @@ const NavBar = () => {
               offset={-6.5 * 14}
               onClick={removeShowMenu}
             >
-              Projects
+              Proyectos
             </Link>
           </li>
           <li className='nav__item'>
@@ -100,7 +100,7 @@ const NavBar = () => {
               offset={-6.5 * 14}
               onClick={removeShowMenu}
             >
-              Contact
+              Contacto
             </Link>
           </li>
         </ul>

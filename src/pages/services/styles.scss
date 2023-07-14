@@ -12,5 +12,8 @@
     background-color: $primaryColor;
     margin: auto 0 6rem;
     width: 100%;
+    @include responsive(pc) {
+      margin-bottom: 4rem;
+    }
   }
 }

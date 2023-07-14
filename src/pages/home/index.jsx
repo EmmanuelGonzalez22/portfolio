@@ -1,7 +1,6 @@
 import { Link } from "react-scroll";
 import { useIcons } from "../../hooks";
 import avatar from "../../assets/img/avatar-svg.svg";
-import firebaseLogo from "../../assets/img/firebase-icon.svg";
 import "./styles.scss";
 
 const Home = () => {
@@ -146,9 +145,7 @@ const Home = () => {
               />
             </svg>
           </div>
-          <div className='avatar__container--circle'>
-            <Icon icon='fab fa-node' />
-          </div>
+          <div className='avatar__container--circle'></div>
         </div>
         <div className='info__profile'>
           <div>

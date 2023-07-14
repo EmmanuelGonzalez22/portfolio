@@ -23,7 +23,7 @@ const About = () => {
         </div>
         <div className='button__about'>
           <p className='text__three'>
-            Enfocado en cada día aprender algo nuevo, y ser un poquito mejor que
+            Enfocado en cada día aprender algo nuevo, y ser un poco mejor que
             ayer.
           </p>
           <Link to='contact' offset={-6.5 * 14} className='button'>

@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { AccordionItem } from "../../../components";
+import { AccordionItem, AccordionItemDesk } from "../../../components";
 import "./styles.scss";
+import { useResponsiveComponent } from "../../../hooks";
 
 const Accordion = () => {
   const faqs = [
@@ -39,18 +40,24 @@ const Accordion = () => {
     }
   };
 
+  const responsive = useResponsiveComponent(1152);
+
   return (
     <ul className='accordion__list'>
-      {faqs.map((faq, index) => {
-        return (
-          <AccordionItem
-            key={index}
-            active={active}
-            handleToggle={handleToggle}
-            faq={faq}
-          />
-        );
-      })}
+      {responsive
+        ? faqs.map((faq, index) => {
+            return (
+              <AccordionItem
+                key={index}
+                active={active}
+                handleToggle={handleToggle}
+                faq={faq}
+              />
+            );
+          })
+        : faqs.map((faq, index) => {
+            return <AccordionItemDesk key={index} faq={faq} />;
+          })}
     </ul>
   );
 };

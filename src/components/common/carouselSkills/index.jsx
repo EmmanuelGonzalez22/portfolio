@@ -61,9 +61,6 @@ const CarouselSkills = () => {
           <Icon icon='fab fa-sass' />
         </div>
         <div className='slide'>
-          <Icon icon='fab fa-node' />
-        </div>
-        <div className='slide'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 32 32'

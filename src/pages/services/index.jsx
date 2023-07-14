@@ -1,5 +1,4 @@
-import { CarouselSkills } from "../../components";
-import { Accordion } from "../../components/containers";
+import { CarouselSkills, Accordion } from "../../components";
 import "./styles.scss";
 const Services = () => {
   return (

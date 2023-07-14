@@ -1,0 +1,62 @@
+@import "../../../scss/mixins";
+
+.tabs {
+  width: 80px;
+  overflow: hidden;
+  background-color: $primaryColor;
+  border-right: 2px $secondaryColor solid;
+  height: 300px;
+  position: relative;
+  transition: border 0.8s ease-in-out, width 0.4s 0.1s ease-in-out;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      rgba(28, 28, 28, 1) 0%,
+      rgba(28, 28, 28, 1) 20%,
+      rgba(48, 42, 24, 1) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.5s 0.2s ease-in-out;
+  }
+  &:hover {
+    width: 450px;
+    border-color: $titleColor;
+    &::before {
+      opacity: 1;
+    }
+    .social-links svg {
+      color: $titleColor;
+      font-size: var(--h1-font-size);
+    }
+  }
+  .paragraph {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 370px;
+    margin-left: 80px;
+    height: 100%;
+    padding-right: 1rem;
+    position: relative;
+    p {
+      font-size: var(--smaller-font-size);
+    }
+  }
+  .social-links {
+    display: flex;
+    width: 80px;
+    justify-content: center;
+    svg {
+      position: absolute;
+      top: 137px;
+      font-size: var(--h2-font-size);
+      transition: all 0.4s 0.4s ease-in-out;
+    }
+  }
+}
