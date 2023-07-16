@@ -17,6 +17,7 @@ const useScroll = () => {
   useEffect(() => {
     document.body.style.overflow = "hidden";
     const handleScroll = (event) => {
+      event.stopPropagation();
       const deltaY = event.deltaY;
       if (!isScrolling) {
         setIsScrolling(true);
@@ -34,6 +35,7 @@ const useScroll = () => {
     };
 
     const handleTouchMove = (event) => {
+      event.stopPropagation();
       const touch = event.touches[0];
       const deltaY = touch.clientY - touchStartPosition.current;
 
@@ -55,6 +57,7 @@ const useScroll = () => {
     };
 
     const handleTouchStart = (event) => {
+      event.stopPropagation();
       const touch = event.touches[0];
       touchStartPosition.current = touch.clientY;
     };

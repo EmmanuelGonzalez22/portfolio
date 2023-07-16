@@ -6,11 +6,11 @@ const AccordionItemDesk = ({ faq }) => {
   const { header, id, text, svg } = faq;
 
   return (
-    <li class='tabs'>
-      <div class='social-links twitter-icon'>
+    <li className='tabs'>
+      <div className='social-links twitter-icon'>
         <Icon icon={svg} />
       </div>
-      <div class='paragraph'>
+      <div className='paragraph'>
         <h1>{header}</h1>
         <p>{text}</p>
       </div>

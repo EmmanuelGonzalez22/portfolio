@@ -72,6 +72,8 @@ const Carousel = () => {
   return (
     <Swiper
       grabCursor
+      lazyPreloadPrevNext={true}
+      touchMoveStopPropagation={true}
       centeredSlides
       slidesPerView='auto'
       effect='coverflow'

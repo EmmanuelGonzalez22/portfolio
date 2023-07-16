@@ -1,9 +1,6 @@
 @import "../../../scss/mixins";
 .accordion__list {
-  padding: 1rem 10%;
-  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  border-radius: 8px; */
-  /* max-width: 800px; */
+  padding: 0 10%;
   @include responsive(pc) {
     width: 100%;
     min-width: 950px;
