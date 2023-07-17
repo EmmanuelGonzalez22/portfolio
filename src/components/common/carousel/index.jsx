@@ -8,11 +8,23 @@ import "./styles.scss";
 const slides = [
   {
     src: "https://emmanuelgonzalez22.github.io/PF-GonzalezSosa.github.io/",
-    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793709/mountain_zh3vlj.webp",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793714/mountain2_awnc4z.webp",
   },
   {
     src: "https://emmanuelgonzalez22.github.io/PF-GonzalezSosa.github.io/",
-    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793714/mountain2_awnc4z.webp",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793709/mountain_zh3vlj.webp",
+  },
+  {
+    src: "https://emmanuelgonzalez22.github.io/practicando-mundial.github.io/",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793709/messi_rbpzmq.webp",
+  },
+  {
+    src: "https://emmanuelgonzalez22.github.io/practicando-mundial.github.io/",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793708/messi2_anlg7d.webp",
+  },
+  {
+    src: "https://mi-primer-app-a84ce.web.app/",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793708/pets2_nonlfu.webp",
   },
   {
     src: "https://emmanuelgonzalez22.github.io/PF-GonzalezSosa.github.io/",
@@ -41,15 +53,6 @@ const slides = [
   },
   {
     src: "https://emmanuelgonzalez22.github.io/practicando-mundial.github.io/",
-    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793709/messi_rbpzmq.webp",
-  },
-  {
-    src: "https://emmanuelgonzalez22.github.io/practicando-mundial.github.io/",
-    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793708/messi2_anlg7d.webp",
-    mobile: true,
-  },
-  {
-    src: "https://emmanuelgonzalez22.github.io/practicando-mundial.github.io/",
     img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793706/messi-mobile_dmmcku.webp",
     mobile: true,
   },
@@ -61,10 +64,6 @@ const slides = [
   {
     src: "https://mi-primer-app-a84ce.web.app/",
     img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793710/pets_rchstr.webp",
-  },
-  {
-    src: "https://mi-primer-app-a84ce.web.app/",
-    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793708/pets2_nonlfu.webp",
   },
 ];
 

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { AccordionItem, AccordionItemDesk } from "../../../components";
 import "./styles.scss";
-import { useResponsiveComponent } from "../../../hooks";
+import { useResponsive } from "../../../hooks";
 
 const Accordion = () => {
   const faqs = [
@@ -40,7 +40,7 @@ const Accordion = () => {
     }
   };
 
-  const responsive = useResponsiveComponent(1152);
+  const responsive = useResponsive(1152);
 
   return (
     <ul className='accordion__list'>
