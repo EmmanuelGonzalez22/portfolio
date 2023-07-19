@@ -5,6 +5,7 @@ export {
   AccordionItem,
   CarouselSkills,
   AccordionItemDesk,
+  CarouselMobile,
 } from "./common";
 export { ContactForm } from "./forms";
 export { Accordion } from "./containers";

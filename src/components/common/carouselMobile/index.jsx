@@ -1,20 +1,89 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import "./styles.scss";
+
+import "swiper/css";
+
+const slides = [
+  {
+    src: "https://emmanuelgonzalez22.github.io/PF-GonzalezSosa.github.io/",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793714/mountain2_awnc4z.webp",
+  },
+  {
+    src: "https://emmanuelgonzalez22.github.io/PF-GonzalezSosa.github.io/",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793709/mountain_zh3vlj.webp",
+  },
+  {
+    src: "https://emmanuelgonzalez22.github.io/practicando-mundial.github.io/",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793709/messi_rbpzmq.webp",
+  },
+  {
+    src: "https://emmanuelgonzalez22.github.io/practicando-mundial.github.io/",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793708/messi2_anlg7d.webp",
+  },
+  {
+    src: "https://mi-primer-app-a84ce.web.app/",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793708/pets2_nonlfu.webp",
+  },
+  {
+    src: "https://emmanuelgonzalez22.github.io/PF-GonzalezSosa.github.io/",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793711/WhatsApp_Image_2023-06-22_at_23.46.17_gbwiic.webp",
+    mobile: true,
+  },
+  {
+    src: "https://emmanuelgonzalez22.github.io/PF-GonzalezSosa.github.io/",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793708/WhatsApp_Image_2023-06-22_at_23.46.18_1_x9ly1e.webp",
+    mobile: true,
+  },
+  {
+    src: "https://emmanuelgonzalez22.github.io/PF-GonzalezSosa.github.io/",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793707/WhatsApp_Image_2023-06-22_at_23.46.18_su8wr9.webp",
+    mobile: true,
+  },
+  {
+    src: "https://emmanuelgonzalez22.github.io/PF-GonzalezSosa.github.io/",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793707/WhatsApp_Image_2023-06-22_at_23.46.19_qeinaw.webp",
+    mobile: true,
+  },
+  {
+    src: "https://emmanuelgonzalez22.github.io/PF-GonzalezSosa.github.io/",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793706/WhatsApp_Image_2023-06-22_at_23.46.17_1_wuhjbg.webp",
+    mobile: true,
+  },
+  {
+    src: "https://emmanuelgonzalez22.github.io/practicando-mundial.github.io/",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793706/messi-mobile_dmmcku.webp",
+    mobile: true,
+  },
+  {
+    src: "https://emmanuelgonzalez22.github.io/practicando-mundial.github.io/",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793706/messi2-mobile_jiwkry.webp",
+    mobile: true,
+  },
+  {
+    src: "https://mi-primer-app-a84ce.web.app/",
+    img: "https://res.cloudinary.com/dfxdwscp4/image/upload/v1687793710/pets_rchstr.webp",
+  },
+];
+
 const CarouselMobile = () => {
   return (
     <Swiper
-      effect={"cards"}
-      grabCursor={true}
-      modules={[EffectCards]}
+      slidesPerView={1}
+      spaceBetween={30}
+      loop={true}
       className='mySwiper'
     >
-      <SwiperSlide>Slide 1</SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
-      <SwiperSlide>Slide 5</SwiperSlide>
-      <SwiperSlide>Slide 6</SwiperSlide>
-      <SwiperSlide>Slide 7</SwiperSlide>
-      <SwiperSlide>Slide 8</SwiperSlide>
-      <SwiperSlide>Slide 9</SwiperSlide>
+      {slides.map((slide, i) => (
+        <SwiperSlide
+          key={`${slide.img}-${i}`}
+          style={{
+            backgroundImage: `url(${slide.img})`,
+          }}
+          className={` ${slide.mobile ? "mobile" : ""}`}
+        >
+          <a href={slide.src} target='_blank' rel='noopener noreferrer'></a>
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 };

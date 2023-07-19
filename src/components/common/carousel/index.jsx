@@ -74,7 +74,7 @@ const Carousel = () => {
       lazyPreloadPrevNext={true}
       touchMoveStopPropagation={true}
       centeredSlides
-      slidesPerView='auto'
+      slidesPerView='3'
       effect='coverflow'
       loop
       coverflowEffect={{

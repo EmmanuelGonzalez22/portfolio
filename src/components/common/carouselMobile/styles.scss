@@ -1,0 +1,12 @@
+.swiper-wrapper {
+  height: 300px;
+}
+.swiper-slide {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  a {
+    display: block;
+    height: 100%;
+  }
+}

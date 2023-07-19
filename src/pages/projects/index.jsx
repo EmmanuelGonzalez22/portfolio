@@ -1,7 +1,9 @@
-import { Carousel } from "../../components";
+import { Carousel, CarouselMobile } from "../../components";
+import { useResponsive } from "../../hooks";
 import "./styles.scss";
 
 const Projects = () => {
+  const responsive = useResponsive(1152);
   return (
     <section className='projects__container'>
       <article className='title__container'>
@@ -11,7 +13,7 @@ const Projects = () => {
         </h3>
       </article>
       <article className='carousel__container'>
-        <Carousel />
+        {responsive ? <CarouselMobile /> : <Carousel />}
       </article>
     </section>
   );
