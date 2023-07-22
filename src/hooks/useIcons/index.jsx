@@ -26,6 +26,7 @@ import {
   faChevronDown,
   faChartLine,
   faLink,
+  faUpRightFromSquare,
 } from "@fortawesome/free-solid-svg-icons";
 
 const useIcons = (className) => {
@@ -52,7 +53,9 @@ const useIcons = (className) => {
       faChevronDown,
       faNode,
       faChartLine,
-      faLink
+      faLink,
+
+      faUpRightFromSquare
     );
 
     return () => {

@@ -42,7 +42,7 @@ const useScroll = () => {
       if (!isScrolling) {
         setIsScrolling(true);
 
-        if (deltaY > 30 || deltaY < -30) {
+        if (deltaY > 50 || deltaY < -50) {
           if (deltaY > 0) {
             scrollToPreviousSection();
           } else {
