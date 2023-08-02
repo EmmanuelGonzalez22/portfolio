@@ -3,7 +3,7 @@ import { useState } from "react";
 import { EffectCoverflow, Keyboard } from "swiper";
 import { useIcons } from "../../../hooks";
 import { slides } from "../../../data";
-import { Modal } from "../../common";
+import { Modal } from "../../../components";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
