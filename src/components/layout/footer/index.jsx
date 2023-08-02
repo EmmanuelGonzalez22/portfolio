@@ -18,7 +18,7 @@ const Footer = () => {
             </li>
             <li className='social__item'>
               <a
-                href='https://www.linkedin.com/in/emmanuel-gonzalez-935470227/'
+                href='https://www.linkedin.com/in/emmanuel-gonzalez-desarrollador-web/'
                 target='_blank'
               >
                 <Icon icon='fab fa-linkedin' />

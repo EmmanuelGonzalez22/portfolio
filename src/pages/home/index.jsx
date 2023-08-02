@@ -1,10 +1,15 @@
 import { Link } from "react-scroll";
-import { useIcons } from "../../hooks";
+import { useIcons, useDownload } from "../../hooks";
 import avatar from "../../assets/img/avatar-svg.svg";
+import vite from "../../assets/img/vite.svg";
 import "./styles.scss";
 
 const Home = () => {
   const Icon = useIcons("circle__icon");
+  const URL_CV =
+    "https://www.dropbox.com/scl/fi/9fd8i3wq1an4z9ydkpsaj/CV-Emmanuel-Gonzalez.pdf?rlkey=6iqah7zeiz1iyyjhlzekk3ay3&dl=1";
+  const { downloadFileAtURL, isDownload, msg } = useDownload(URL_CV);
+
   return (
     <section className='home__container'>
       <article className='social__container'>
@@ -16,7 +21,7 @@ const Home = () => {
           </li>
           <li className='social__item'>
             <a
-              href='https://www.linkedin.com/in/emmanuel-gonzalez-935470227/'
+              href='https://www.linkedin.com/in/emmanuel-gonzalez-desarrollador-web/'
               target='_blank'
             >
               <Icon icon='fab fa-linkedin' />
@@ -145,7 +150,9 @@ const Home = () => {
               />
             </svg>
           </div>
-          <div className='avatar__container--circle'></div>
+          <div className='avatar__container--circle'>
+            <img src={vite} alt='ViteJS' className='circle__icon' />
+          </div>
         </div>
         <div className='info__profile'>
           <div>
@@ -159,14 +166,14 @@ const Home = () => {
             Innovación, pasión y calidad en cada línea de código que escribo.
           </h4>
           <div className='buttons__profile'>
-            <a
+            <button
               className='button'
-              href='https://www.dropbox.com/s/ibfr4yag36w4czp/Cv%20Emmanuel%20Gonzalez.pdf?dl=0'
-              download
-              target='_blank'
+              onClick={(e) => {
+                downloadFileAtURL(URL_CV);
+              }}
             >
-              Descargar CV <Icon icon='fas fa-arrow-down' />
-            </a>
+              {msg} {!isDownload && <Icon icon='fas fa-arrow-down' />}
+            </button>
             <a
               href='https://wa.me/5492944690230/?text=%C2%A1Hola%21%20%C2%BFEst%C3%A1s%20buscando%20un%20desarrollador%20web%20altamente%20motivado%20y%20comprometido%3F%20%C2%A1Escr%C3%ADbeme%20y%20hablemos%20sobre%20las%20oportunidades%20actuales%20y%20c%C3%B3mo%20puedo%20contribuir%20al%20crecimiento%20de%20tu%20organizaci%C3%B3n%21'
               target='_blank'
