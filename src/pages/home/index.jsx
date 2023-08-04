@@ -157,7 +157,7 @@ const Home = () => {
               <span>{"<h1> "}</span>¡Hola! Soy Emmanuel
               <span>{" <h1/>"}</span>
             </h1>
-            <h2 className='home__subtitle'>Front-end Developer</h2>
+            <h2 className='home__subtitle'>Frontend Developer</h2>
           </div>
           <h4>
             Innovación, pasión y calidad en cada línea de código que escribo.

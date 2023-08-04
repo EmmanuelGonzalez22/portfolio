@@ -12,12 +12,12 @@ const About = () => {
       <article className='info__about-container'>
         <div className='info__about'>
           <p className='text__one'>
-            Desarrollador Front-end con sede en Bariloche, Argentina. Tengo
+            Desarrollador Frontend con sede en Bariloche, Argentina. Tengo
             experiencia en la construcción de aplicaciones web con JavaScript,
             React JS, HTML, CSS y más.
           </p>
           <p className='text__two'>
-            Como profesional en programación Front-end, estoy listo para aplicar
+            Como profesional en programación Frontend, estoy listo para aplicar
             mis conocimientos. Si tienes alguna pregunta, por favor contáctame.
           </p>
         </div>
@@ -27,7 +27,7 @@ const About = () => {
             ayer.
           </p>
           <Link to='contact' offset={-6.5 * 14} className='button'>
-            ¡Contactame!
+            ¡Contáctame!
           </Link>
         </div>
       </article>
