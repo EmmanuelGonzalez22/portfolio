@@ -7,6 +7,7 @@ export {
   AccordionItemDesk,
   ButtonsHome,
   Modal,
+  SelectLanguages,
 } from "./common";
 export { ContactForm } from "./forms";
 export { Accordion } from "./containers";
