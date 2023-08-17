@@ -77,8 +77,8 @@
         }
         .avatar {
           opacity: 0;
-          -webkit-animation: showUp 2s ease-in-out 3s forwards;
-          animation: showUp 2s ease-in-out 3s forwards;
+          -webkit-animation: showUp 2s ease-in-out 2s forwards;
+          animation: showUp 2s ease-in-out 2s forwards;
         }
       }
       .avatar__container--circle {
@@ -238,9 +238,9 @@
         border-right: 0.1em solid $textColor;
         white-space: nowrap;
         overflow: hidden;
-        -webkit-animation: typing 4s steps(30, end) forwards,
+        -webkit-animation: typing 2s steps(30, end) forwards,
           blink-caret 0.5s step-end infinite alternate;
-        animation: typing 4s steps(30, end) forwards,
+        animation: typing 2s steps(30, end) forwards,
           blink-caret 0.5s step-end infinite alternate;
         span {
           color: #569cd6;

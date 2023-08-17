@@ -10,8 +10,8 @@
   }
   .title__container {
     @include responsive(pc) {
-      width: 40%;
-      margin-bottom: 3rem;
+      width: 43%;
+      margin-bottom: 2.5rem;
     }
   }
   .info__about-container {
@@ -28,19 +28,26 @@
       gap: 0;
     }
     @include responsive(pc) {
-      width: 40%;
-      align-items: center;
+      width: 43%;
       gap: 2rem;
       margin: 0;
     }
     .info__about {
       font-size: var(--smaller-font-size);
       width: 50%;
+      line-height: 1.8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       @include responsive(pc) {
         width: 100%;
       }
+      .text__one,
+      .text__two {
+        width: 90%;
+      }
       .text__one {
-        margin-bottom: 2rem;
+        margin-bottom: 0.7rem;
       }
     }
     .button__about {
@@ -81,7 +88,7 @@
     }
   }
   .button {
-    margin: 1rem auto 0;
+    margin: 2rem auto 0;
     display: block;
     max-width: fit-content;
     @include responsive(pc) {

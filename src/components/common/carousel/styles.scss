@@ -8,7 +8,7 @@
     background-size: cover;
     width: 300px;
     height: 300px;
-    -webkit-box-reflect: below 10px
+    -webkit-box-reflect: below 5px
       linear-gradient(transparent, transparent, #0006);
     cursor: pointer;
     border-radius: 10px;
@@ -18,16 +18,17 @@
     }
     @include responsive(mobile) {
       width: 230px;
+      background-size: contain;
+      background-repeat: no-repeat;
       -webkit-box-reflect: initial;
+      .swiper-slide-shadow-left,
+      .swiper-slide-shadow-right {
+        background-image: none;
+      }
     }
     @include responsive(pc) {
       width: 30%;
     }
-  }
-  .swiper-slide.mobile {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
   }
   .mobile .swiper-slide-shadow-left,
   .mobile .swiper-slide-shadow-right {
