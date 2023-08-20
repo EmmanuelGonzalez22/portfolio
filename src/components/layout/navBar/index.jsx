@@ -1,8 +1,12 @@
+import { useTranslation } from "react-i18next";
 import { Link } from "react-scroll";
 import { useEffect, useRef } from "react";
 import "./styles.scss";
+import { SelectLanguages } from "../../common/selectLanguages";
 
 const NavBar = () => {
+  const { t } = useTranslation();
+
   const menuRef = useRef(null);
   const toggleMenuRef = useRef(null);
 
@@ -56,7 +60,7 @@ const NavBar = () => {
               offset={-6.5 * 14}
               onClick={removeShowMenu}
             >
-              Home
+              {t("home")}
             </Link>
           </li>
           <li className='nav__item'>
@@ -67,7 +71,7 @@ const NavBar = () => {
               offset={-6.5 * 14}
               onClick={removeShowMenu}
             >
-              Sobre mí
+              {t("about")}
             </Link>
           </li>
           <li className='nav__item'>
@@ -78,7 +82,7 @@ const NavBar = () => {
               offset={-6.5 * 14}
               onClick={removeShowMenu}
             >
-              Servicios
+              {t("services")}
             </Link>
           </li>
           <li className='nav__item'>
@@ -89,7 +93,7 @@ const NavBar = () => {
               offset={-6.5 * 14}
               onClick={removeShowMenu}
             >
-              Proyectos
+              {t("projects")}
             </Link>
           </li>
           <li className='nav__item'>
@@ -100,10 +104,11 @@ const NavBar = () => {
               offset={-6.5 * 14}
               onClick={removeShowMenu}
             >
-              Contacto
+              {t("contact")}
             </Link>
           </li>
         </ul>
+        <SelectLanguages />
         {/* BURGUER MENU */}
         <div id='toggle__menu' onClick={handleMenu} ref={toggleMenuRef}>
           <span></span>

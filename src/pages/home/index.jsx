@@ -1,11 +1,13 @@
+import { useTranslation } from "react-i18next";
 import { useIcons } from "../../hooks";
+import { ButtonsHome } from "../../components";
 import avatar from "../../assets/img/avatar-svg.svg";
 import vite from "../../assets/img/vite.svg";
 import "./styles.scss";
-import { ButtonsHome } from "../../components";
 
 const Home = () => {
   const Icon = useIcons("circle__icon");
+  const { t } = useTranslation();
 
   return (
     <section className='home__container'>
@@ -154,14 +156,13 @@ const Home = () => {
         <div className='info__profile'>
           <div>
             <h1 className='home__title'>
-              <span>{"<h1> "}</span>¡Hola! Soy Emmanuel
+              <span>{"<h1> "}</span>
+              {t("home_title")}
               <span>{" <h1/>"}</span>
             </h1>
-            <h2 className='home__subtitle'>Frontend Developer</h2>
+            <h2 className='home__subtitle'>{t("home_subtitle")}</h2>
           </div>
-          <h4>
-            Innovación, pasión y calidad en cada línea de código que escribo.
-          </h4>
+          <h4>{t("home_description")}</h4>
           <div className='buttons__profile'>
             <ButtonsHome />
           </div>

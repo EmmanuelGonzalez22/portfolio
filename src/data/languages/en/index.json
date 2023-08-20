@@ -1,0 +1,13 @@
+{
+  "home": "Home",
+  "about": "About me",
+  "services": "Services",
+  "projects": "Projects",
+  "contact": "Contact",
+  "home_title": "Hello! I´m Emmanuel",
+  "home_subtitle": "Frontend Developer",
+  "home_description":"I put innovation, passion, and quality into every line of code I write.",
+  "button_wsp": "Let´s talk",
+  "button_cv": "Download CV",
+  "button_about": "About me!"
+}

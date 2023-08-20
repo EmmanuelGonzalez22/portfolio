@@ -1,0 +1,13 @@
+{
+  "home": "Inicio",
+  "about": "Sobre mí",
+  "services": "Servicios",
+  "projects": "Proyectos",
+  "contact": "Contacto",
+  "home_title": "¡Hola! Soy Emmanuel",
+  "home_subtitle": "Desarrollador Frontend",
+  "home_description":"Innovación, pasión y calidad en cada línea de código que escribo.",
+  "button_wsp": "¡Conversemos",
+  "button_cv": "Descargar CV",
+  "button_about":"¡Conóceme más!"
+}

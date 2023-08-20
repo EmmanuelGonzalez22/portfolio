@@ -1,14 +1,14 @@
 import { useState } from "react";
 
 const useDownload = () => {
-  const [msg, setMsg] = useState("Descargar CV");
+  const [msg, setMsg] = useState("button_cv");
   const [isDownload, setIsDownload] = useState(false);
 
   const downloadFileAtURL = (url) => {
     setIsDownload(true);
     setMsg("Descargando...");
     setTimeout(() => {
-      setMsg("Descargar CV");
+      setMsg("button_cv");
       setIsDownload(false);
     }, 2000);
 

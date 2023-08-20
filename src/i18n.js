@@ -1,8 +1,8 @@
-import i18next from "i18next";
+import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
-import translationEN from "./en/translation.json";
-import translationES from "./es/translation.json";
+import translationEN from "./data/languages/en/index.json";
+import translationES from "./data/languages/es/index.json";
 
 // the translations
 const resources = {
@@ -14,15 +14,15 @@ const resources = {
   },
 };
 
-i18next
+i18n
   .use(initReactI18next) // passes i18n down to react-i18next
   .init({
     resources,
-    lng: "en", // language to use, more information here: https://www.i18next.com/overview/configuration-options#languages-namespaces-resources
+    lng: "en", // language to use
     fallbackLng: "en", // if user computer language is not on the list of available languages, than we will be using the fallback language specified earlier
     interpolation: {
       escapeValue: false,
     },
   });
 
-export default i18next;
+export default i18n;

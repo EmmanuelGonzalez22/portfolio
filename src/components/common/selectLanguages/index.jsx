@@ -10,7 +10,11 @@ const SelectLanguages = () => {
   };
 
   return (
-    <select className='form-control' value={i18n.language} onChange={onChange}>
+    <select
+      className='form-control'
+      defaultValue={i18n.language}
+      onChange={onChange}
+    >
       {LANGUAGES.map(({ code, name }) => (
         <option key={code} value={code}>
           {name}
