@@ -1,5 +1,6 @@
 import { useFormContext } from "react-hook-form";
 import { capitalizeFirstLetter } from "../../../helpers";
+import { useTranslation } from "react-i18next";
 
 const FormInput = ({
   label,
@@ -15,6 +16,7 @@ const FormInput = ({
   autoComplete,
   textarea,
 }) => {
+  const { t } = useTranslation();
   const {
     register,
     formState: { errors },
@@ -55,7 +57,7 @@ const FormInput = ({
           id={id}
           required={required}
           {...register(id, {
-            required: required && `Campo obligatorio`,
+            required: required && t("contact_error_obligatory"),
             pattern: pattern && {
               value: pattern,
               message: errorMessage,
@@ -74,18 +76,18 @@ const FormInput = ({
           id={id}
           placeholder={placeholder}
           {...register(id, {
-            required: required && `Campo obligatorio`,
+            required: required && t("contact_error_obligatory"),
             pattern: pattern && {
               value: pattern,
               message: errorMessage,
             },
             minLength: {
               value: minLength,
-              message: `Mínimo ${minLength} caracteres`,
+              message: t("contact_error_minLength", { minLength }),
             },
             validate: match && {
               matchesInputs: (value) => {
-                return value === watch(match) || "Los campos no coinciden";
+                return value === watch(match) || t("contact_error_match");
               },
             },
           })}

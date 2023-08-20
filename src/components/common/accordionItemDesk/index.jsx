@@ -3,7 +3,7 @@ import "./styles.scss";
 
 const AccordionItemDesk = ({ faq }) => {
   const Icon = useIcons();
-  const { header, id, text, svg } = faq;
+  const { header, text, svg } = faq;
 
   return (
     <li className='tabs'>
