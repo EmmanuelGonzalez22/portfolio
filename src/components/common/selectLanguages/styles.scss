@@ -1,25 +1,24 @@
 @import "../../../scss/mixins";
 .form-control {
   font: inherit;
-  font-size: var(--normal-font-size);
+  font-size: var(--smaller-font-size);
   border: none;
-  color: $titleColor;
+  color: $secondaryColor;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   background: transparent;
-  padding-right: 20px;
+  cursor: pointer;
+  @include responsive(pc) {
+    color: $textColor;
+    padding: 0 0.6rem;
+  }
   &:focus {
     outline: none;
-    box-shadow: none;
     border-color: $primaryColor;
   }
   option {
     color: $textColor;
     background-color: $backgroundColor;
-    &::selection {
-      color: $primaryColor;
-      background-color: $backgroundColor;
-    }
   }
 }

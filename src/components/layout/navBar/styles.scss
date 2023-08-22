@@ -10,7 +10,7 @@
   background-color: $primaryColor;
   display: flex;
   align-items: center;
-  padding: 0 6rem;
+  padding: 0 1rem 0 6rem;
   @include responsive(mobile) {
     padding: 0 1rem;
   }
@@ -89,9 +89,21 @@
       }
       .nav__item-lang {
         display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        border: 1px solid $secondaryColor;
+        border-radius: 5px;
+        padding: 0.4rem 0.6rem;
+        margin: auto 0 10rem;
+        @include responsive(pc) {
+          padding: 0.4rem 0.6rem 0.4rem 0;
+          gap: 0;
+          border-color: $titleColor;
+          margin: 0;
+        }
         div {
-          width: 30px;
-          height: 30px;
+          width: 20px;
+          height: 20px;
         }
       }
     }
