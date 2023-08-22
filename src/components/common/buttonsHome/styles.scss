@@ -1,0 +1,19 @@
+@import "../../../scss/mixins";
+.buttons__profile {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  @include responsive(pc) {
+    width: 90%;
+  }
+  .button {
+    max-width: 140px;
+    @include responsive(pc) {
+      max-width: 200px;
+    }
+    svg {
+      color: #25d366;
+    }
+  }
+}

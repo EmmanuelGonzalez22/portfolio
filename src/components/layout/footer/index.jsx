@@ -3,7 +3,7 @@ import "./styles.scss";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const Icon = useIcons();
+  const { Icon } = useIcons();
 
   return (
     <footer className='footer'>

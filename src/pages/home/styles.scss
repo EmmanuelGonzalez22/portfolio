@@ -6,8 +6,8 @@
   padding-bottom: 2rem;
   @include responsive(pc) {
     flex-direction: row;
-    justify-content: space-evenly;
-    padding-bottom: 0;
+    justify-content: space-between;
+    padding: 0 6rem;
   }
 
   .social__container {
@@ -60,167 +60,6 @@
       align-items: center;
     }
 
-    .svg__profile {
-      margin: 0 auto;
-      position: relative;
-      width: 230px;
-      opacity: 0;
-      -webkit-animation: showUpContainer 2s ease-in-out forwards;
-      animation: showUpContainer 2s ease-in-out forwards;
-      @include responsive(pc) {
-        width: 500px;
-      }
-      .avatar__container {
-        .avatar__background {
-          fill: $primaryColor;
-          filter: drop-shadow(0 12px 12px #ffcc744e);
-        }
-        .avatar {
-          opacity: 0;
-          -webkit-animation: showUp 2s ease-in-out 2s forwards;
-          animation: showUp 2s ease-in-out 2s forwards;
-        }
-      }
-      .avatar__container--circle {
-        position: absolute;
-        top: 5%;
-        left: 20%;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background-color: #302a18a8;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        -webkit-animation: rotate 50s linear infinite;
-        animation: rotate 50s linear infinite;
-        transform-origin: 170% 305%;
-        @include responsive(pc) {
-          width: 50px;
-          height: 50px;
-          transform-origin: 280% 505%;
-        }
-        &:nth-child(2) {
-          top: 25%;
-          left: 0;
-          transform-origin: 290% 185%;
-          @include responsive(pc) {
-            transform-origin: 485% 285%;
-          }
-          svg {
-            color: #2965f1;
-          }
-        }
-        &:nth-child(3) {
-          top: 2%;
-          left: 62%;
-          transform-origin: -70% 305%;
-          @include responsive(pc) {
-            transform-origin: -125% 508%;
-          }
-          svg {
-            color: #7952b3;
-          }
-        }
-        &:nth-child(4) {
-          top: 83%;
-          left: 15%;
-          transform-origin: 200% -195%;
-          @include responsive(pc) {
-            transform-origin: 320% -335%;
-          }
-          svg {
-            color: #61dbfb;
-          }
-        }
-        &:nth-child(5) {
-          top: 67%;
-          left: 0;
-          transform-origin: 290% -90%;
-          @include responsive(pc) {
-            transform-origin: 460% -180%;
-          }
-          svg {
-            color: #cb3837;
-          }
-        }
-        &:nth-child(6) {
-          top: 22%;
-          left: 83%;
-          transform-origin: -200% 195%;
-          @include responsive(pc) {
-            transform-origin: -315% 315%;
-          }
-          svg {
-            color: #f7df1e;
-          }
-        }
-        &:nth-child(7) {
-          top: 60%;
-          left: 86%;
-          transform-origin: -195% -68%;
-          @include responsive(pc) {
-            transform-origin: -380% -80%;
-          }
-          svg {
-            color: #e34f26;
-          }
-        }
-        &:nth-child(8) {
-          top: 78%;
-          left: 75%;
-          transform-origin: -140% -155%;
-          @include responsive(pc) {
-            transform-origin: -255% -285%;
-          }
-          svg {
-            color: #f05032;
-          }
-        }
-        &:nth-child(9) {
-          top: 90%;
-          left: 50%;
-          transform-origin: -5% -230%;
-          @include responsive(pc) {
-            transform-origin: -10% -385%;
-          }
-          svg {
-            color: white;
-          }
-        }
-        &:nth-child(10) {
-          top: 45%;
-          left: -5%;
-          transform-origin: 310% 55%;
-          @include responsive(pc) {
-            transform-origin: 540% 55%;
-          }
-          svg {
-            color: #cc6699;
-          }
-        }
-        &:nth-child(11) {
-          top: 42%;
-          left: 88%;
-          transform-origin: -235% 58%;
-          @include responsive(pc) {
-            transform-origin: -395% 120%;
-          }
-          svg {
-            color: #cc6699;
-          }
-        }
-        .circle__icon {
-          font-size: 2rem;
-          width: 50%;
-          -webkit-animation: rotate 50s linear infinite reverse;
-          animation: rotate 50s linear infinite reverse;
-          color: #43853d;
-        }
-      }
-    }
-
     .info__profile {
       text-align: center;
       @include responsive(pc) {
@@ -260,80 +99,12 @@
           width: 70%;
         }
       }
-      .buttons__profile {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 1rem;
-        @include responsive(pc) {
-          width: 90%;
-        }
-        .button {
-          max-width: fit-content;
-          @include responsive(pc) {
-            max-width: 200px;
-          }
-          svg {
-            color: #25d366;
-          }
-        }
-      }
     }
   }
 }
 
 /* ------------- KEYFRAMES ------------- */
 
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes showUp {
-  0% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-}
-@-webkit-keyframes showUp {
-  0% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-}
-@keyframes showUpContainer {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes showUpContainer {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @keyframes typing {
   0% {
     max-width: 0;

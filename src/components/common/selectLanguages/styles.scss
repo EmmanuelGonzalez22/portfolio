@@ -1,0 +1,25 @@
+@import "../../../scss/mixins";
+.form-control {
+  font: inherit;
+  font-size: var(--normal-font-size);
+  border: none;
+  color: $titleColor;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  padding-right: 20px;
+  &:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: $primaryColor;
+  }
+  option {
+    color: $textColor;
+    background-color: $backgroundColor;
+    &::selection {
+      color: $primaryColor;
+      background-color: $backgroundColor;
+    }
+  }
+}

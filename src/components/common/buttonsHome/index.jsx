@@ -1,14 +1,17 @@
 import { Link } from "react-scroll";
+import { useTranslation } from "react-i18next";
 import { useDownload, useIcons } from "../../../hooks";
-import { t } from "i18next";
+import "./styles.scss";
 
 const ButtonsHome = () => {
-  const Icon = useIcons("circle__icon");
+  const { Icon } = useIcons("circle__icon");
+  const { t } = useTranslation();
   const URL_CV =
     "https://www.dropbox.com/scl/fi/9fd8i3wq1an4z9ydkpsaj/CV-Emmanuel-Gonzalez.pdf?rlkey=6iqah7zeiz1iyyjhlzekk3ay3&dl=1";
   const { downloadFileAtURL, isDownload, msg } = useDownload(URL_CV);
+
   return (
-    <>
+    <div className='buttons__profile'>
       <button
         className='button'
         onClick={(e) => {
@@ -27,7 +30,7 @@ const ButtonsHome = () => {
       <Link className='button' to='about' offset={-6.5 * 14}>
         {t("button_about")}
       </Link>
-    </>
+    </div>
   );
 };
 

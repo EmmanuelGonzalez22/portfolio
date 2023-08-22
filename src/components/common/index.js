@@ -6,3 +6,5 @@ export { AccordionItemDesk } from "./accordionItemDesk";
 export { Modal } from "./modal";
 export { ButtonsHome } from "./buttonsHome";
 export { SelectLanguages } from "./selectLanguages";
+export { HomeAvatar } from "./homeAvatar";
+export { HomeProfile } from "./homeProfile";

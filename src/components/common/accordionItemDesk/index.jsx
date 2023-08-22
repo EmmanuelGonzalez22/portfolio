@@ -2,7 +2,7 @@ import { useIcons } from "../../../hooks";
 import "./styles.scss";
 
 const AccordionItemDesk = ({ faq }) => {
-  const Icon = useIcons();
+  const { Icon } = useIcons();
   const { header, text, svg } = faq;
 
   return (

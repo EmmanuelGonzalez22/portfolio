@@ -10,7 +10,7 @@ import "swiper/css/effect-coverflow";
 import "./styles.scss";
 
 const Carousel = () => {
-  const Icon = useIcons();
+  const { Icon } = useIcons();
   const [selectedId, setSelectedId] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
 

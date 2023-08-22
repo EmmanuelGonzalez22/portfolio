@@ -54,7 +54,6 @@ const useIcons = (className) => {
       faNode,
       faChartLine,
       faLink,
-
       faUpRightFromSquare
     );
 
@@ -67,7 +66,7 @@ const useIcons = (className) => {
     <FontAwesomeIcon icon={icon} className={className} />
   );
 
-  return Icon;
+  return { Icon };
 };
 
 export { useIcons };

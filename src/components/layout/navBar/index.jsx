@@ -107,8 +107,10 @@ const NavBar = () => {
               {t("contact")}
             </Link>
           </li>
+          <li className='nav__item nav__item-lang'>
+            <SelectLanguages removeShowMenu={removeShowMenu} />
+          </li>
         </ul>
-        <SelectLanguages />
         {/* BURGUER MENU */}
         <div id='toggle__menu' onClick={handleMenu} ref={toggleMenuRef}>
           <span></span>

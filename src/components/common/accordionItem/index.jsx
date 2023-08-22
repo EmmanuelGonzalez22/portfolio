@@ -3,7 +3,7 @@ import { useIcons } from "../../../hooks";
 import "./styles.scss";
 
 const AccordionItem = ({ handleToggle, active, faq }) => {
-  const Icon = useIcons();
+  const { Icon } = useIcons();
   const contentEl = useRef(null);
   const { header, id, text, svg } = faq;
 

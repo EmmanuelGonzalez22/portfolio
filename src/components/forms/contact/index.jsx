@@ -8,7 +8,7 @@ const ContactForm = ({ onSubmit }) => {
   const { t } = useTranslation();
   const methods = useForm();
   const { handleSubmit } = methods;
-  const Icon = useIcons("icon");
+  const { Icon } = useIcons("icon");
 
   return (
     <FormProvider {...methods}>

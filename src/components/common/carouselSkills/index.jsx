@@ -1,10 +1,9 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useIcons } from "../../../hooks";
-import vite from "../../../assets/img/vite.svg";
 import "./styles.scss";
 
 const CarouselSkills = () => {
-  const Icon = useIcons("icon__slide");
+  const { Icon } = useIcons("icon__slide");
 
   const containerRef = useRef(null);
   const iconRef = useRef(null);
