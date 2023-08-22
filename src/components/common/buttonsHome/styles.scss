@@ -8,7 +8,7 @@
     width: 90%;
   }
   .button {
-    max-width: 140px;
+    max-width: 135px;
     @include responsive(pc) {
       max-width: 200px;
     }

@@ -13,8 +13,6 @@ const SelectLanguages = ({ removeShowMenu }) => {
     removeShowMenu();
   };
 
-  console.log(spanish);
-
   return (
     <>
       <select
