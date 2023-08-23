@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useState } from "react";
 import { EffectCoverflow, Keyboard } from "swiper";
+import { useTranslation } from "react-i18next";
 import { useIcons } from "../../../hooks";
 import { slides } from "../../../data";
 import { Modal } from "../../../components";
@@ -13,6 +14,7 @@ const Carousel = () => {
   const { Icon } = useIcons();
   const [selectedId, setSelectedId] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useTranslation();
 
   const handleOpenModal = (id) => {
     setSelectedId(id);
@@ -61,7 +63,7 @@ const Carousel = () => {
               <Modal isOpen={isOpen} onClose={handleCloseModal}>
                 <header className={`header__modal ${light ? "light" : ""}`}>
                   <h3 className='title__modal'>{title}</h3>
-                  <p className='desc__modal'>{desc}</p>
+                  <p className='desc__modal'>{t(desc)}</p>
                 </header>
                 <footer className={`footer__modal`}>
                   <a href={src} target='_blank' rel='noopener noreferrer'>
