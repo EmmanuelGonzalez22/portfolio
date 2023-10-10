@@ -6,7 +6,7 @@ const useDownload = () => {
 
   const downloadFileAtURL = (url) => {
     setIsDownload(true);
-    setMsg("Descargando...");
+    setMsg("button_cv_download");
     setTimeout(() => {
       setMsg("button_cv");
       setIsDownload(false);
